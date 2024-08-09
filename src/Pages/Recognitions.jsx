@@ -14,12 +14,12 @@ function Recognitions() {
       <p className="text-3xl max-md:text-2xl py-2 max-lg:py-5">
         -Recognitions-
       </p>
-      <div className=" flex w-[80vw] items-center justify-evenly py-10 max-lg:bg-white max-lg:p-2 max-lg:rounded-2xl">
+      <div className=" flex w-[80vw] items-center justify-evenly py-10 max-lg:shadow-2xl max-lg:bg-white max-lg:p-2 max-lg:rounded-2xl">
         {cards.map((value, index) => {
           return (
             <span key={index} className="flex items-center justify-center">
               <RecognitionCard bgImg={value} />
-              {/* line for small scree */}
+              {/* line for small screen*/}
               {index < 2 && <img src={line} className="w-[10px] lg:hidden" />}
             </span>
           );

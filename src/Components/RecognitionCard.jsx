@@ -3,7 +3,7 @@ function RecognitionCard({ bgImg }) {
   return (
     <>
       {/* Recognition card for large screen */}
-      <div className="bg-white h-[12rem] w-[15rem] rounded-3xl flex items-center justify-center  max-lg:hidden ">
+      <div className="bg-white h-[12rem] w-[15rem] rounded-3xl flex items-center shadow-2xl justify-center  max-lg:hidden ">
         <img src={bgImg} className="w-[10rem] h-[6.5 rem]" />
       </div>
       {/* Recognition card for small screen */}

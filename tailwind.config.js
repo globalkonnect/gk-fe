@@ -11,7 +11,8 @@ export default {
        Alata : ["Alata", 'sans-serif']
       } ,
      colors:{
-      Yellow:"#FFCD3A"
+      Yellow:"#FFCD3A",
+      Offwhite:"#F2F2F2"
      }
     
     },
