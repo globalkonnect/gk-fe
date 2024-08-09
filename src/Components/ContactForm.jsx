@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactForm() {
   return (
-    <div class="w-full font-Alata">
+    <div class="w-full font-Alata shadow-2xl rounded-3xl">
       <form class="bg-white shadow-md rounded-3xl px-8 pt-6 pb-8 mb-4 flex-col flex items-center justify-center">
         <div className="flex max-md:flex-col items-center  justify-between mb-5 ">
           <input
