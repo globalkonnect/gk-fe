@@ -4,7 +4,7 @@ import Recognitions from "./Pages/Recognitions"
 function App() {
   return (
     <div >
-    {/* <Recognitions /> */}
+    <Recognitions />
     <ContactUs />
     <Footer />
     </div>
