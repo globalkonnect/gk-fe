@@ -14,9 +14,9 @@ function ContactForm() {
 
           <input
             class="shadow appearance-none border border-gray-600 rounded-lg w-[19vw] max-md:w-[60vw] py-3 px-3 text-gray-700  leading-tight focus:outline-double  focus:shadow-outline focus:ring-blue-500 focus:border-blue-500"
-            id="password"
-            type="password"
-            placeholder="user@email.com"
+            id="email"
+            type="email"
+            placeholder="User@email.com"
           />
           {/* <p class="text-red-500 text-xs italic">Please choose a password.</p> */}
         </div>
@@ -25,7 +25,7 @@ function ContactForm() {
           id="message"
           rows="4"
           class=" py-2 px-2 md:w-[39vw] max-md:w-[60vw] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-600 focus:ring-blue-700 focus:border-blue-700 "
-          placeholder="Leave a comment..."
+          placeholder="Leave a Message..."
         ></textarea>
 
         <button
