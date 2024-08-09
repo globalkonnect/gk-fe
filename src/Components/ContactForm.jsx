@@ -4,7 +4,7 @@ function ContactForm() {
   return (
     <div class="w-full font-Alata shadow-2xl rounded-3xl">
       <form class="bg-white shadow-md rounded-3xl px-8 pt-6 pb-8 mb-4 flex-col flex items-center justify-center">
-        <div className="flex max-md:flex-col items-center  justify-between mb-5 ">
+        <div className="flex max-md:flex-col items-center  justify-between py-5 ">
           <input
             class="shadow appearance-none border rounded-lg w-[19vw] max-md:mb-5 md:mr-4 max-md:w-[60vw] py-3 px-3 border-gray-600  text-gray-700 leading-tight focus:outline-double focus:shadow-outline focus:ring-blue-500 focus:border-blue-500"
             id="username"
