@@ -5,7 +5,7 @@ function App() {
   return (
     <div >
     {/* <Recognitions /> */}
-    {/* <ContactUs /> */}
+    <ContactUs />
     <Footer />
     </div>
   )
