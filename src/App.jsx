@@ -1,11 +1,13 @@
 import ContactUs from "./Pages/ContactUs"
 import Footer from "./Components/Footer"
+import Recognitions from "./Pages/Recognitions"
 function App() {
 
   return (
     <div >
-    <ContactUs />
-    <Footer />
+    <Recognitions />
+    {/* <ContactUs /> */}
+    {/* <Footer /> */}
     </div>
   )
 }
