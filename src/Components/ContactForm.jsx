@@ -29,7 +29,7 @@ function ContactForm() {
         ></textarea>
 
         <button
-          class="bg-Yellow hover:border-blue-700 border-2 border-Yellow text-lg mt-5 text-black font-bold py-1 px-6 rounded-3xl focus:outline-double focus:shadow-outline"
+          class="bg-Yellow hover:border-blue-700 border-2 border-Yellow text-lg mt-5 text-black font-bold py-1 px-6 rounded-3xl focus:outline-none focus:shadow-outline focus:ring-blue-700 focus:border-blue-700"
           type="button"
         >
           Submit
