@@ -18,10 +18,10 @@ function Footer() {
   return (
     <div className="w-full flex-col flex items-center justify-center bg-black text-white h-[15rem] overflow-x-hidden">
       {/* FOOTER TOOLS */}
-      <div className="flex items-center justify-evenly w-[40rem] max-sm:hidden py-5">
+      <div className="flex items-center justify-evenly w-[40rem] max-sm:hidden py-5 font-Alata">
      {footerTools.map((value,index)=>{return  <a key={index} href={value.link} target="_blank"  rel="noopener noreferrer">{value.toolName}</a>})}
       </div>
-{/* SECTION2 */}
+    {/* SECTION2 */}
       <div className="  w-full flex items-center justify-center ">
         {/* LINE IMG */}
         <div className="bg-white w-[50vw]">
