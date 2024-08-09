@@ -3,7 +3,7 @@ function App() {
 
   return (
     <div >
-    Embrays Technologies
+    <ContactUs />
     </div>
   )
 }

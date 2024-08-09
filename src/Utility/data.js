@@ -1,4 +1,4 @@
-const globalKonnect = {
+export const globalKonnect = {
     home: {
         title: "North East India",
         subtitle: "A mesmerizing tapestry of vibrant cultures, breathtaking landscapes, and untamed natural beauty.",
