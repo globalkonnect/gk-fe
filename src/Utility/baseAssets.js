@@ -13,6 +13,10 @@ import bajaj from "../assets/Clients/Bajaj.png";
 //Aboutus
 import aboutImg from "../assets/AboutUs/About.svg";
 
+//whyus
+import bentLine from "../assets/whyUs/bentLine.png"
+import rectangle from "../assets/whyUs/Rectangle.png"
+
 export const allAssets = {
   //Recognitions
   verticalLine,
@@ -26,4 +30,7 @@ export const allAssets = {
   bajaj,
   //About
   aboutImg,
+  //whyus
+  bentLine,
+  rectangle
 };
