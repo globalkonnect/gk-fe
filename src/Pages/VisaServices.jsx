@@ -26,7 +26,7 @@ function VisaServices() {
           SCHENGEN VISA
         </p>
         <div className="bg-Yellow w-[50vw]">
-          <img src={line} className="bg-black " />
+          <img src={line} className="bg-Yellow " />
         </div>
       </div>
     </div>
