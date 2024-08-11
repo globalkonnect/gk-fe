@@ -1,9 +1,10 @@
 import React from "react";
+import { allAssets } from "../Utility/baseAssets";
 import { BiLogoFacebook } from "react-icons/bi";
 import { GrInstagram } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
-import Line from "../assets/Others/Line.png";
 function Footer() {
+  const line = allAssets.Line;
   //FOOTER TOOLS
   const footerTools = [
     { toolName: "HOME", link: "/" },
@@ -15,7 +16,7 @@ function Footer() {
   ];
   // SOCIAL MEDIA
   const footerIcons = [<BiLogoFacebook />, <GrInstagram />, <BsWhatsapp />];
-  
+
   return (
     <div className="w-full flex-col flex items-center justify-center bg-black text-white h-[15rem] overflow-x-hidden">
       {/* FOOTER TOOLS */}
@@ -26,7 +27,7 @@ function Footer() {
               key={index}
               href={value.link}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer "
             >
               {value.toolName}
             </a>
@@ -37,7 +38,7 @@ function Footer() {
       <div className="  w-full flex items-center justify-center ">
         {/* LINE IMG */}
         <div className="bg-white w-[50vw]">
-          <img src={Line} />
+          <img src={line} />
         </div>
 
         {/* SOCIAL MEDIA */}
@@ -51,8 +52,9 @@ function Footer() {
             </div>
           );
         })}
+        {/* line */}
         <div className="bg-white w-[50vw]">
-          <img src={Line} alt="line" />
+          <img src={line} alt="line" />
         </div>
       </div>
     </div>

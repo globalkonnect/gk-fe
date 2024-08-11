@@ -17,6 +17,14 @@ import aboutImg from "../assets/AboutUs/About.svg";
 import bentLine from "../assets/whyUs/bentLine.png"
 import rectangle from "../assets/whyUs/Rectangle.png"
 
+//Footer
+import Line from "../assets/Others/Line.png"
+
+// Visa Services
+import visaImg1 from "../assets/VisaService/visaimg1.svg"
+import visaImg2 from "../assets/VisaService/visaimg2.svg"
+import visaImg3 from "../assets/VisaService/visaimg3.svg"
+
 export const allAssets = {
   //Recognitions
   verticalLine,
@@ -32,5 +40,12 @@ export const allAssets = {
   aboutImg,
   //whyus
   bentLine,
-  rectangle
+  rectangle,
+  //Footer
+  Line,
+
+//Visa Service
+visaImg1,
+visaImg2,
+visaImg3,
 };
