@@ -25,6 +25,12 @@ import visaImg1 from "../assets/VisaService/visaimg1.svg"
 import visaImg2 from "../assets/VisaService/visaimg2.svg"
 import visaImg3 from "../assets/VisaService/visaimg3.svg"
 
+//Services
+import airplane from '../assets/Services/airplane.png'
+import change from '../assets/Services/change.png'
+import honeymoon from '../assets/Services/honeymoon.png'
+import visa from '../assets/Services/visa.png'
+import bg from '../assets/Services/servicebg.svg'
 export const allAssets = {
   //Recognitions
   verticalLine,
@@ -43,9 +49,14 @@ export const allAssets = {
   rectangle,
   //Footer
   Line,
-
 //Visa Service
 visaImg1,
 visaImg2,
 visaImg3,
+//Service
+airplane,
+change,
+honeymoon,
+visa,
+bg
 };
