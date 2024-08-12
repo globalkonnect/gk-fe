@@ -7,6 +7,7 @@ import WhyUs from "./Pages/WhyChoose"
 import VisaServices from "./Pages/VisaServices";
 import Service from "./Pages/Service";
 import Tours from "./Pages/Tours";
+import Testimonials from "./Pages/Testimonials";
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
       <Clients />
       <VisaServices />
       <Recognitions />
+      <Testimonials />
       <ContactUs />
       <Footer />
     </div>
