@@ -31,6 +31,10 @@ import change from '../assets/Services/change.png'
 import honeymoon from '../assets/Services/honeymoon.png'
 import visa from '../assets/Services/visa.png'
 import bg from '../assets/Services/servicebg.svg'
+//Tours
+import northEI from "../assets/Tours/NEI.svg"
+import Thailand from "../assets/Tours/Thailand.svg"
+import Dubai from "../assets/Tours/Dubai.svg"
 export const allAssets = {
   //Recognitions
   verticalLine,
@@ -58,5 +62,9 @@ airplane,
 change,
 honeymoon,
 visa,
-bg
+bg,
+//Tours
+northEI,
+Thailand,
+Dubai,
 };

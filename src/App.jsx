@@ -6,10 +6,12 @@ import About from "./Pages/About";
 import WhyUs from "./Pages/WhyChoose"
 import VisaServices from "./Pages/VisaServices";
 import Service from "./Pages/Service";
+import Tours from "./Pages/Tours";
 function App() {
   return (
     <div>
       <About />
+      <Tours />
       <WhyUs />
       <Service />
       <Clients />
