@@ -1,36 +1,24 @@
 import React from "react";
-import { allAssets } from "../Utility/baseAssets";
-import VisaServiceCard from "../Components/VisaServiceCard";
-function VisaServices() {
-  const line = allAssets.Line;
+import WhyUsDesktop from "../Components/WhyUsDesktop";
+import WhyUsMobile from "../Components/WhyUsMobile";
+
+function WhyChoose() {
   return (
-    <div className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-20">
-      {/* title */}
-      <p>
-        <span className="max-md:hidden">-</span>Visa Services
+    <div className="bg-Yellow font-Alata w-full pt-10 flex-col">
+      {/* Section Title */}
+      <p className="font-Rammetto text-3xl text-center p-5 flex items-center justify-center">
+        <span className="max-md:hidden">-</span>
+        Why Choose Global Konnect
         <span className="max-md:hidden">-</span>
       </p>
-      {/* card component */}
-      <div className="py-20">
-        <VisaServiceCard />
-      </div>
-      {/* text */}
-      <p className="py-10">0% Failure</p>
-      {/* lines + text */}
-      <div className="flex w-full items-center justify-center">
-        <div className="bg-Yellow w-[50vw]">
-          <img src={line} />
-        </div>
-        {/* end text */}
-        <p className="text-Yellow text-2xl text-center w-[300px] max-sm:text-base max-md:text-xl max-lg:w-[350px] max-md:w-[300px] max-sm:w-[400px]">
-          SCHENGEN VISA
-        </p>
-        <div className="bg-Yellow w-[50vw]">
-          <img src={line} className="bg-Yellow " />
-        </div>
-      </div>
+
+      {/* Component for Desktop View */}
+      <WhyUsDesktop />
+
+      {/* Component for Mobile View */}
+      <WhyUsMobile />
     </div>
   );
 }
 
-export default VisaServices;
+export default WhyChoose;

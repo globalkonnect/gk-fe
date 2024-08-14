@@ -1,19 +1,26 @@
-import React from 'react'
-import TestimonialCard from '../Components/TestimonialCard'
-import { allAssets } from '../Utility/baseAssets'
+import React from "react";
+import TestimonialCard from "../Components/TestimonialCard";
+import { allAssets } from "../Utility/baseAssets";
+
 function Testimonials() {
-  const bg = allAssets.bgTestimonial
+  // Destructuring the background image for the Testimonials section from allAssets
+  const { bgTestimonial } = allAssets;
+
   return (
-    <div className='py-10 flex flex-col items-center justify-center bg-Offwhite font-Rammetto text-3xl bg-cover bg-center'
-    style={{ backgroundImage: `url(${bg})`}}
+    <div
+      className="py-10 flex flex-col items-center justify-center bg-Offwhite font-Rammetto text-3xl bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgTestimonial})` }}
     >
-         <p className="py-5">
+      {/* Title */}
+      <p className="py-5">
         <span className="max-md:hidden">-</span>Testimonials
         <span className="max-md:hidden">-</span>
       </p>
-        <TestimonialCard />
+
+      {/* Testimonial card section */}
+      <TestimonialCard />
     </div>
-  )
+  );
 }
 
-export default Testimonials
+export default Testimonials;
