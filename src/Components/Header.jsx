@@ -11,7 +11,7 @@ function Header() {
     { item: "VISA", link: "" },
   ];
   return (
-    <div className="absolute top-0 md:left-[15vw] max-md:left-0 z-20 opacity-70 flex items-center justify-between md:w-[70vw] max-md:w-full bg-offBlack font-Alata py-3 rounded-b-3xl">
+    <div className="fixed top-0 md:left-[15vw] max-md:left-0 z-20 opacity-90 flex items-center justify-between md:w-[70vw] max-md:w-full bg-offBlack font-Alata py-3 rounded-b-3xl">
       <div className="ml-10 flex items-center justify-center">
         <img src={GK} />
       </div>
