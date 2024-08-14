@@ -1,24 +1,46 @@
 import React from "react";
-import WhyUsDesktop from "../Components/WhyUsDesktop";
-import WhyUsMobile from "../Components/WhyUsMobile";
+import { allAssets } from "../Utility/baseAssets";
+import VisaServiceCard from "../Components/VisaServiceCard";
 
-function WhyChoose() {
+function VisaServices() {
+  // Destructuring the line asset from allAssets
+  const { Line } = allAssets;
+
   return (
-    <div className="bg-Yellow font-Alata w-full pt-10 flex-col">
-      {/* Section Title */}
-      <p className="font-Rammetto text-3xl text-center p-5 flex items-center justify-center">
-        <span className="max-md:hidden">-</span>
-        Why Choose Global Konnect
+    <div className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-20">
+      {/* Title */}
+      <p>
+        <span className="max-md:hidden">-</span>Visa Services
         <span className="max-md:hidden">-</span>
       </p>
 
-      {/* Component for Desktop View */}
-      <WhyUsDesktop />
+      {/* VisaServiceCard component */}
+      <div className="py-20">
+        <VisaServiceCard />
+      </div>
 
-      {/* Component for Mobile View */}
-      <WhyUsMobile />
+      {/* Success rate text */}
+      <p className="py-10">0% Failure</p>
+
+      {/* Line and text section */}
+      <div className="flex w-full items-center justify-center">
+        {/* Left line */}
+        <div className="bg-Yellow w-[50vw]">
+          <img src={Line} alt="decorative line" />
+        </div>
+
+        {/* Central text */}
+        <p className="text-Yellow text-2xl text-center w-[300px] max-sm:text-base max-md:text-xl max-lg:w-[350px] max-md:w-[300px] max-sm:w-[400px]">
+          SCHENGEN VISA
+        </p>
+
+        {/* Right line */}
+        <div className="bg-Yellow w-[50vw]">
+          <img src={Line} alt="decorative line" />
+        </div>
+      </div>
     </div>
   );
 }
 
-export default WhyChoose;
+export default VisaServices;

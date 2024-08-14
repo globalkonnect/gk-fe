@@ -3,24 +3,26 @@ import Footer from "./Components/Footer";
 import Recognitions from "./Pages/Recognitions";
 import Clients from "./Pages/Clients";
 import About from "./Pages/About";
-import WhyUs from "./Pages/WhyChoose"
+import WhyUs from "./Pages/WhyChoose";
 import VisaServices from "./Pages/VisaServices";
 import Service from "./Pages/Service";
 import Tours from "./Pages/Tours";
 import Testimonials from "./Pages/Testimonials";
+import Header from "./Components/Header";
 function App() {
   return (
     <div>
-      {/* <About />
-      <Tours />
+      <Header />
+      <About />
+      {/* <Tours /> */}
       <WhyUs />
-      <Service />
+      {/* <Service /> */}
       <Clients />
-      <VisaServices />
-      <Recognitions /> */}
+      {/* <VisaServices /> */}
+      <Recognitions />
       <Testimonials />
-      {/* <ContactUs />
-      <Footer /> */}
+      <ContactUs />
+      <Footer />
     </div>
   );
 }

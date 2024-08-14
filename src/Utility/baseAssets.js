@@ -37,6 +37,8 @@ import Thailand from "../assets/Tours/Thailand.svg"
 import Dubai from "../assets/Tours/Dubai.svg"
 //Testimonial
 import bgTestimonial from "../assets/Testimonial/testimonialbg.svg"
+//header
+import GK from "../assets/Others/logo.svg"
 export const allAssets = {
   //Recognitions
   verticalLine,
@@ -70,5 +72,7 @@ northEI,
 Thailand,
 Dubai,
 //Testimonial
-bgTestimonial
+bgTestimonial,
+//header
+GK
 };
