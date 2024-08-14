@@ -11,16 +11,16 @@ import Testimonials from "./Pages/Testimonials";
 function App() {
   return (
     <div>
-      <About />
+      {/* <About />
       <Tours />
       <WhyUs />
       <Service />
       <Clients />
       <VisaServices />
-      <Recognitions />
+      <Recognitions /> */}
       <Testimonials />
-      <ContactUs />
-      <Footer />
+      {/* <ContactUs />
+      <Footer /> */}
     </div>
   );
 }
