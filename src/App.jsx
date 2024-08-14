@@ -9,16 +9,18 @@ import Service from "./Pages/Service";
 import Tours from "./Pages/Tours";
 import Testimonials from "./Pages/Testimonials";
 import Header from "./Components/Header";
+import Home from "./Pages/Home";
 function App() {
   return (
     <div>
       <Header />
+      <Home />
       <About />
       {/* <Tours /> */}
       <WhyUs />
       {/* <Service /> */}
       <Clients />
-      {/* <VisaServices /> */}
+      <VisaServices />
       <Recognitions />
       <Testimonials />
       <ContactUs />
