@@ -7,19 +7,19 @@ function ContactUs() {
   const { title, subtitle } = globalKonnect.contact;
 
   return (
-    <div className="w-full text-black flex-col flex py-4 items-center justify-center bg-Yellow">
+    <div className="w-full h-[25rem] text-black flex-col flex  items-center justify-center bg-Yellow">
       {/* Title section */}
-      <p className="font-Rammetto text-3xl py-4 w-full text-center max-sm:text-2xl">
+      <p className="font-Rammetto text-3xl  w-full text-center max-sm:text-2xl">
         {title}
       </p>
 
       {/* Subtitle section */}
-      <p className="font-Alata rounded-3xl px-4 py-2 bg-black text-Yellow">
+      <p className="font-Alata rounded-3xl px-4 my-5 py-2 bg-black text-Yellow">
         {subtitle}
       </p>
 
       {/* Contact form container */}
-      <div className="w-[45vw] mt-[3rem] max-md:w-[80vw]">
+      <div className="w-[45vw]  max-md:w-[80vw] -mb-[12rem] mt-[1rem]">
         <ContactForm />
       </div>
     </div>

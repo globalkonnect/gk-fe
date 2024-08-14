@@ -8,13 +8,13 @@ function VisaServiceCard() {
   const image1 = allAssets.visaImg1;
   const image2 = allAssets.visaImg2;
   const image3 = allAssets.visaImg3;
-  const visaImages = [image1, image2, image3,image1, image2, image3];
+  const visaImages = [image1, image2, image3, image1, image2, image3];
   return (
-    <div className="w-full flex items-center justify-evenly">
+    <div className="w-[99vw] flex items-center justify-evenly">
       <Swiper
         modules={[Autoplay]}
         loop={true}
-        autoplay={{ delay:0 }}
+        autoplay={{ delay: 0 }}
         speed={3000}
         centeredSlides={true}
         centeredSlidesBounds={true}
@@ -24,13 +24,10 @@ function VisaServiceCard() {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 2.5 },
         }}
-        
       >
         {visaImages.map((value, index) => (
           <SwiperSlide key={index}>
-            <div className="mx-5">
             <img src={value} />
-            </div>
           </SwiperSlide>
         ))}
       </Swiper>

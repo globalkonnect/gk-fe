@@ -19,6 +19,7 @@ function Testimonials() {
 
       {/* Testimonial card section */}
       <div className="flex items-center ">
+
         <img src={Line} className="bg-white lg:w-[35vw] max-md:hidden" />
         <TestimonialCard />
       </div>

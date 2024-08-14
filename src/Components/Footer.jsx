@@ -18,9 +18,9 @@ function Footer() {
   const footerIcons = [<BiLogoFacebook />, <GrInstagram />, <BsWhatsapp />];
 
   return (
-    <div className="w-full flex-col flex items-center justify-center bg-black text-white h-[15rem] overflow-x-hidden">
+    <div className="w-full flex-col py-10 flex items-center justify-center bg-black text-white  overflow-x-hidden">
       {/* FOOTER TOOLS */}
-      <div className="flex items-center justify-evenly w-[40rem] max-sm:hidden py-5 font-Alata">
+      <div className="flex items-center justify-evenly w-[40rem] max-sm:hidden pb-5 mt-28  font-Alata">
         {footerTools.map((value, index) => {
           return (
             <a
@@ -35,7 +35,7 @@ function Footer() {
         })}
       </div>
       {/* SECTION2 */}
-      <div className="  w-full flex items-center justify-center ">
+      <div className="  w-full flex items-center justify-center max-sm:mt-32">
         {/* LINE IMG */}
         <div className="bg-white w-[50vw]">
           <img src={line} />
@@ -46,7 +46,7 @@ function Footer() {
           return (
             <div
               key={index}
-              className="flex items-center justify-evenly text-3xl p-2 m-2 text-black border-black hover:border-2 hover:border-white bg-Yellow rounded-full"
+              className="flex items-center  justify-evenly text-3xl p-2 m-2 text-black border-black hover:border-2 hover:border-white bg-Yellow rounded-full"
             >
               {value}
             </div>
