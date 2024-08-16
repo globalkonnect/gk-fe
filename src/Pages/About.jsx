@@ -8,7 +8,7 @@ function About() {
   const img = allAssets.aboutImg;
 
   return (
-    <div className="w-full bg-black font-Alata text-white text-lg flex items-center justify-evenly py-10">
+    <div className="w-full bg-black font-Alata text-white text-lg flex items-center justify-evenly pt-[10rem] pb-12">
       {/* Text section */}
       <div className="flex-col py-5 flex items-start justify-evenly max-lg:text-base max-lg:items-center max-lg:text-center max-lg:w-[80vw] lg:w-[35vw] px-5 leading-relaxed">
         {/* Title */}

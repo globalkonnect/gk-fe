@@ -1,10 +1,9 @@
 export const globalKonnect = {
-  home: {
-    title: "North East India",
-    subtitle:
-      "A mesmerizing tapestry of vibrant cultures, breathtaking landscapes, and untamed natural beauty.",
-    otherLinks: ["ADVENTURE", "EXPLORATION"],
-  },
+  home: [
+{    title: "North East India",
+    description:"A mesmerizing tapestry of vibrant cultures, breathtaking landscapes, and untamed natural beauty.",
+    otherLinks: "ADVENTURE | EXPLORATION",}
+  ],
   aboutUs: {
     intro:
       "Global Konnect, based in the heart of Guwahati, Assam, is your premier travel agency, crafting memorable journeys across North East India and beyond. Recognized by Dubai’s Department of Economy and Tourism and Ministry of Assam Tourism, we specialize in curating hassle-free travel experiences, offering competitive prices and expert services for both fixed and flexible itineraries.",

@@ -5,7 +5,7 @@ function WhyChoose() {
   return (
     <div className="bg-Yellow font-Alata w-full pt-10 flex-col">
       {/* title */}
-      <p className="font-Rammetto text-3xl text-center p-5 flex items-center justify-center">
+      <p className="font-Rammetto text-3xl text-center mt-[10rem] flex items-center justify-center">
         <span className="max-md:hidden">-</span>Why Choose Global Konnect{" "}
         <span className="max-md:hidden">-</span>
       </p>

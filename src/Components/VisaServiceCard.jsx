@@ -27,7 +27,7 @@ function VisaServiceCard() {
       >
         {visaImages.map((value, index) => (
           <SwiperSlide key={index}>
-            <img src={value} />
+            <img src={value} className="h-[30rem]"/>
           </SwiperSlide>
         ))}
       </Swiper>

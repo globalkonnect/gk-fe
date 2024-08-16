@@ -8,16 +8,23 @@ function Clients() {
   const clientsImg = [tata, pandg, topcem, bajaj];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite py-5">
+    <div className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite py-[9rem]">
       {/* Clients title */}
-      <p>-Clients-</p>
+      <p className="py-5 mx-20  backdrop-blur-sm">
+        <span className="max-md:hidden">-</span>Clients
+        <span className="max-md:hidden">-</span>
+      </p>
 
       {/* Client cards grid */}
-      <div className="py-10 grid max-md:grid-cols-2 md:grid-cols-4 items-center justify-center w-[90vw]">
+      <div className="py-20 grid max-md:grid-cols-2 md:grid-cols-4 items-center justify-center w-[90vw]">
         {/* Rendering client cards */}
         {clientsImg.map((value, index) => (
           <span className="flex items-center justify-center" key={index}>
-            <ClientCard bgImg={value} />
+            <ClientCard
+              bgImg={value}
+              height={index === 1 ? "4rem" : "5rem"}
+              width={index === 1 ? "5rem" : "6rem"}
+            />
           </span>
         ))}
       </div>

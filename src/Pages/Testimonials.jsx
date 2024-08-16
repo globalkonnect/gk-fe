@@ -8,7 +8,7 @@ function Testimonials() {
 
   return (
     <div
-      className="py-10 flex flex-col max-md:items-center  max-md:justify-center  bg-Offwhite font-Rammetto text-3xl bg-cover bg-center"
+      className="pb-10 pt-[10rem] flex flex-col max-md:items-center  max-md:justify-center  bg-Offwhite font-Rammetto text-3xl bg-cover bg-center"
       style={{ backgroundImage: `url(${bgTestimonial})` }}
     >
       {/* Title */}

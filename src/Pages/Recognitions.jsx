@@ -11,10 +11,11 @@ function Recognitions() {
   const cards = [dubai, ministryOfTourism, awesomeAssam];
 
   return (
-    <div className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-5">
+    <div className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[8rem] text-3xl">
       {/* Title */}
-      <p className="text-3xl max-md:text-2xl py-2 max-lg:py-5">
-        -Recognitions-
+      <p className="py-[8rem] mx-20 backdrop-blur-sm">
+        <span className="max-md:hidden">-</span>Recognitions
+        <span className="max-md:hidden">-</span>
       </p>
 
       {/* Recognition cards with optional vertical line for small screens */}
