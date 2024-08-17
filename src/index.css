@@ -1,6 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Keyframe animations for smooth vertical transitions */
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Apply the animations */
+.slide-in-up {
+  animation: slide-in-up 0.5s forwards;
+}
+
+.slide-out-down {
+  animation: slide-out-down 0.5s forwards;
+}
+
+.slide-in-down {
+  animation: slide-in-down 0.5s forwards;
+}
+
+.slide-out-up {
+  animation: slide-out-up 0.5s forwards;
+}
