@@ -5,56 +5,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Keyframe animations for smooth vertical transitions */
-@keyframes slide-in-up {
+@keyframes slide-in-right {
   0% {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@keyframes slide-out-down {
+@keyframes slide-out-left {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
 }
 
-@keyframes slide-in-down {
+@keyframes slide-in-left {
   0% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@keyframes slide-out-up {
+@keyframes slide-out-right {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
 }
 
 /* Apply the animations */
-.slide-in-up {
-  animation: slide-in-up 0.5s forwards;
+.slide-in-right {
+  animation: slide-in-right 0.5s forwards;
 }
 
-.slide-out-down {
-  animation: slide-out-down 0.5s forwards;
+.slide-out-left {
+  animation: slide-out-left 0.5s forwards;
 }
 
-.slide-in-down {
-  animation: slide-in-down 0.5s forwards;
+.slide-in-left {
+  animation: slide-in-left 0.5s forwards;
 }
 
-.slide-out-up {
-  animation: slide-out-up 0.5s forwards;
+.slide-out-right {
+  animation: slide-out-right 0.5s forwards;
 }
