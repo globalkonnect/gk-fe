@@ -1,8 +1,35 @@
 export const globalKonnect = {
   home: [
-{    title: "North East India",
-    description:"A mesmerizing tapestry of vibrant cultures, breathtaking landscapes, and untamed natural beauty.",
-    otherLinks: "ADVENTURE | EXPLORATION",}
+    {
+      title: "Rajasthan",
+      description:
+        "A land of grand palaces, vibrant festivals, and vast desert landscapes, offering a royal experience.",
+      tags: "HISTORY | CULTURE",
+    },
+    {
+      title: "Kerala",
+      description:
+        "A tropical paradise known for its serene backwaters, lush greenery, and rich cultural heritage.",
+      tags: "NATURE | WELLNESS",
+    },
+    {
+      title: "Ladakh",
+      description:
+        "A rugged, high-altitude region, offering stunning vistas of mountains, monasteries, and deep valleys.",
+      tags: "ADVENTURE | SPIRITUALITY",
+    },
+    {
+      title: "Andaman",
+      description:
+        "Pristine beaches, crystal-clear waters, and vibrant coral reefs, making it a haven for nature lovers.",
+      tags: "BEACHES | WATER SPORTS",
+    },
+    {
+      title: "Sikkim",
+      description:
+        "A hidden gem in the Himalayas, offering tranquil monasteries, lush forests, and breathtaking views.",
+      tags: "SPIRITUALITY | NATURE",
+    },
   ],
   aboutUs: {
     intro:
@@ -20,24 +47,33 @@ export const globalKonnect = {
       "Immerse yourself in the vibrant culture and stunning landscapes of Thailand. Enjoy bustling cities, tranquil beaches, and exquisite cuisine in this tropical paradise.",
   },
   whyChooseGK: {
-    bullets : [
-    { title: "Personalized Itineraries:",
-     point:"We craft bespoke itineraries tailored to your interests, ensuring a travel experience that's uniquely yours and unforgettable."
-    },
-    { title: "Expert guidance:",
-     point: "Our travel experts offer insights and recommendations, expertly planning every trip aspect, from destinations to accommodations.",
-    },
-    { title: "Exclusive deals:",
-     point:"Enjoy special rates and offers through our industry connections, giving you the best value for your travel investment.",
-
-    },
-    { title: "24x7 support:",
-     point:"Our support team is available around the clock, ready to assist you before and during your trip for peace of mind.",
-    },
-    { title: "Memorable experiences:",
-     point:"We create moments to cherish, discovering hidden gems and enjoying landmarks to leave you with lasting travel memories.",
-    },
-    ], 
+    bullets: [
+      {
+        title: "Personalized Itineraries:",
+        point:
+          "We craft bespoke itineraries tailored to your interests, ensuring a travel experience that's uniquely yours and unforgettable.",
+      },
+      {
+        title: "Expert guidance:",
+        point:
+          "Our travel experts offer insights and recommendations, expertly planning every trip aspect, from destinations to accommodations.",
+      },
+      {
+        title: "Exclusive deals:",
+        point:
+          "Enjoy special rates and offers through our industry connections, giving you the best value for your travel investment.",
+      },
+      {
+        title: "24x7 support:",
+        point:
+          "Our support team is available around the clock, ready to assist you before and during your trip for peace of mind.",
+      },
+      {
+        title: "Memorable experiences:",
+        point:
+          "We create moments to cherish, discovering hidden gems and enjoying landmarks to leave you with lasting travel memories.",
+      },
+    ],
   },
   services: {
     flightDeals:

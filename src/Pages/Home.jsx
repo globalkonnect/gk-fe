@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
 import TextTransition, { presets } from "react-text-transition";
@@ -9,20 +8,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import imag1 from "../assets/test/1.jpg";
 import imag2 from "../assets/test/2.jpg";
 import imag3 from "../assets/test/3.jpg";
+import imag4 from "../assets/test/4.jpg";
+import imag5 from "../assets/test/5.jpg";
 import BackgroundSwitcher from "../Components/BackgroundSwitcher";
-import { allAssets } from "../Utility/baseAssets";
 import { globalKonnect } from "../Utility/data";
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { title, description, otherLinks } = globalKonnect.home[0];
-
   const swiperRef = useRef();
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const homeData = globalKonnect.home;
   const [isNext, setIsNext] = useState(false);
-
-  const images = [imag1, imag2, imag3];
-  const texts = ["Forest", "Building", "Tree"];
+  const images = [imag1, imag2, imag3, imag4, imag5];
 
   const next = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -38,11 +34,6 @@ const Home = () => {
     goToSlide(currentIndex);
   };
 
-  const image1 = allAssets.visaImg1;
-  const image2 = allAssets.visaImg2;
-  const image3 = allAssets.visaImg3;
-  const visaImages = [image1, image2, image3];
-
   const goToSlide = (index) => {
     if (swiperRef.current) {
       swiperRef.current.slideTo(index);
@@ -50,7 +41,10 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="relative h-screen  font-Alata text-Yellow flex flex-col items-center justify-center">
+    <div
+      id="home"
+      className="relative h-screen  font-Alata text-Yellow flex flex-col items-center justify-center"
+    >
       <BackgroundSwitcher images={images} currentIndex={currentIndex} />
 
       <div className="absolute h-screen flex items-center justify-center">
@@ -60,13 +54,15 @@ const Home = () => {
             springConfig={presets.wobbly}
             direction={isNext ? "up" : "down"}
           >
-            {texts[currentIndex]}
+            {homeData[currentIndex].title}
           </TextTransition>
           <div className="flex-col flex items-center justify-center w-[50vw]">
-            <p className="text-xl w-[25rem] text-start">{description}</p>
+            <p className="text-xl w-[25rem] text-start">
+              {homeData[currentIndex].description}
+            </p>
 
             <p className="my-5 flex items-center justify-evenly">
-              {otherLinks}
+              {homeData[currentIndex].tags}
               <span className="mx-5">
                 <button
                   type="button"
@@ -106,6 +102,11 @@ const Home = () => {
           pagination={{ clickable: true }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
+            //log current index
+            swiper.on("slideChange", () => {
+              setCurrentIndex(swiper.realIndex);
+              console.log(swiper.realIndex);
+            });
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
@@ -114,11 +115,11 @@ const Home = () => {
             1024: { slidesPerView: 1.2 },
           }}
         >
-          {visaImages.map((value, index) => (
+          {images.map((value, index) => (
             <SwiperSlide key={index}>
               <img
                 src={value}
-                className="h-[30rem]"
+                className="h-[30rem] w-[30rem] object-cover"
                 onClick={() => {
                   goToSlide(index);
                   next();
