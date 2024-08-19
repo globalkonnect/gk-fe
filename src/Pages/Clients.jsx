@@ -8,7 +8,7 @@ function Clients() {
   const clientsImg = [tata, pandg, topcem, bajaj];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite py-[9rem]">
+    <div id="clients" className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite py-[9rem]">
       {/* Clients title */}
       <p className="py-5 mx-20  backdrop-blur-sm">
         <span className="max-md:hidden">-</span>Clients

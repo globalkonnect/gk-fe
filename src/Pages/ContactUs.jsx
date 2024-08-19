@@ -7,7 +7,7 @@ function ContactUs() {
   const { title, subtitle } = globalKonnect.contact;
 
   return (
-    <div className="w-full h-[25rem] text-black flex-col flex  items-center justify-center bg-Yellow">
+    <div id="contactus" className="w-full h-[25rem] text-black flex-col flex  items-center justify-center bg-Yellow">
       {/* Title section */}
       <p className="font-Rammetto text-3xl  w-full text-center max-sm:text-2xl">
         {title}

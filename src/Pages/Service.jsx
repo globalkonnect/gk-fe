@@ -7,7 +7,7 @@ function Service() {
   const { bg } = allAssets;
 
   return (
-    <div
+    <div id="services"
       className="font-Rammetto flex-col flex items-center justify-center text-center text-Yellow py-20 text-3xl bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >

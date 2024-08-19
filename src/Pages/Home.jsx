@@ -50,7 +50,7 @@ const Home = () => {
   };
 
   return (
-    <div className="relative h-screen  font-Alata text-Yellow flex flex-col items-center justify-center">
+    <div id="home" className="relative h-screen  font-Alata text-Yellow flex flex-col items-center justify-center">
       <BackgroundSwitcher images={images} currentIndex={currentIndex} />
 
       <div className="absolute h-screen flex items-center justify-center">

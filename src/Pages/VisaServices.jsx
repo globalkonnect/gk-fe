@@ -7,7 +7,7 @@ function VisaServices() {
   const { Line } = allAssets;
 
   return (
-    <div className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-[10rem]">
+    <div id="visa" className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-[10rem]">
       {/* Title */}
       <p className="py-10">
         <span className="max-md:hidden">-</span>Visa Services

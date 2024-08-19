@@ -11,7 +11,7 @@ function Recognitions() {
   const cards = [dubai, ministryOfTourism, awesomeAssam];
 
   return (
-    <div className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[8rem] text-3xl">
+    <div id="recognitions" className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[8rem] text-3xl">
       {/* Title */}
       <p className="py-[8rem] mx-20 backdrop-blur-sm">
         <span className="max-md:hidden">-</span>Recognitions
