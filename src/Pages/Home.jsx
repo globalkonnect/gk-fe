@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
 import TextTransition, { presets } from "react-text-transition";
 import "swiper/css";
@@ -16,43 +16,35 @@ import { globalKonnect } from "../Utility/data";
 const Home = () => {
   const swiperRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState("up");
   const homeData = globalKonnect.home;
-  const [isNext, setIsNext] = useState(false);
   const images = [imag1, imag2, imag3, imag4, imag5];
 
   const next = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    setIsNext(true);
-    goToSlide(currentIndex);
+    swiperRef.current.slideNext();
   };
 
   const previous = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-    setIsNext(false);
-    goToSlide(currentIndex);
-  };
-
-  const goToSlide = (index) => {
-    if (swiperRef.current) {
-      swiperRef.current.slideTo(index);
-    }
+    swiperRef.current.slidePrev();
   };
 
   return (
     <div
       id="home"
-      className="relative h-screen  font-Alata text-Yellow flex flex-col items-center justify-center"
+      className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center"
     >
-      <BackgroundSwitcher images={images} currentIndex={currentIndex} />
+      <BackgroundSwitcher
+        images={images}
+        currentIndex={currentIndex}
+        direction={direction}
+      />
 
       <div className="absolute h-screen flex items-center justify-center">
-        <div className="flex space-x-4 flex-col items-center justify-center w-[50vw] h-[50vh] ">
+        <div className="flex space-x-4 flex-col items-center justify-center w-[50vw] h-[50vh]">
           <TextTransition
             className="text-[5rem] text-white font-Rammetto text-start w-[25rem]"
             springConfig={presets.wobbly}
-            direction={isNext ? "up" : "down"}
+            direction={direction}
           >
             {homeData[currentIndex].title}
           </TextTransition>
@@ -60,7 +52,6 @@ const Home = () => {
             <p className="text-xl w-[25rem] text-start">
               {homeData[currentIndex].description}
             </p>
-
             <p className="my-5 flex items-center justify-evenly">
               {homeData[currentIndex].tags}
               <span className="mx-5">
@@ -92,21 +83,17 @@ const Home = () => {
         <Swiper
           className="w-[50vw] h-[50vh]"
           modules={[Navigation, Pagination]}
-          // spaceBetween={50}
-          // slidesPerView={1}
-          navigation
-          speed={300}
           loop={true}
           centeredSlides={true}
-          centeredSlidesBounds={true}
           pagination={{ clickable: true }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
-            //log current index
-            swiper.on("slideChange", () => {
-              setCurrentIndex(swiper.realIndex);
-              console.log(swiper.realIndex);
-            });
+          }}
+          onSlideChange={(swiper) => {
+            const newDirection =
+              swiper.realIndex > currentIndex ? "up" : "down";
+            setDirection(newDirection);
+            setCurrentIndex(swiper.realIndex);
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
@@ -117,14 +104,7 @@ const Home = () => {
         >
           {images.map((value, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={value}
-                className="h-[30rem] w-[30rem] object-cover"
-                onClick={() => {
-                  goToSlide(index);
-                  next();
-                }}
-              />
+              <img src={value} className="h-[30rem] w-[30rem] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>
