@@ -13,7 +13,7 @@ export const globalKonnect = {
       tags: "NATURE | WELLNESS",
     },
     {
-      title: "Ladakh",
+      title: "Ladaakh",
       description:
         "A rugged, high-altitude region, offering stunning vistas of mountains, monasteries, and deep valleys.",
       tags: "ADVENTURE | SPIRITUALITY",
