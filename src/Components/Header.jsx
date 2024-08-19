@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { allAssets } from "../Utility/baseAssets";
-import { RiMenu3Line } from "react-icons/ri";
+import Sidenav from "./Sidenav"
 import { useNavigate } from "react-router-dom";
 function Header() {
   const { GK } = allAssets;
+  const [isOpen, setIsOpen] = React.useState(false);
   const navItems = [
     { item: "HOME",path:"#home" },
     { item: "ABOUT US",path:"#aboutus" },
@@ -22,49 +23,36 @@ function Header() {
       <div className="ml-10 flex items-center justify-center">
         <img src={GK} />
       </div>
-      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button" className="lg:hidden  text-Yellow mr-10 z-30">
-        <RiMenu3Line size={30} />
-      </button>
       
-      
-     {/* {open && <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li>
-        <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-      <li>
-        <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-      </li>
-    </ul>
-</div>} */}
-      
-      
-      
-      
-      
-      
-      <div className="flex items-center justify-center mr-10 max-lg:hidden z-40">
-        {navItems.map((value, index) => {
-          return (
-            <div key={index} className="text-Yellow backdrop-blur-sm mr-6" onClick={()=>{pathLink(value.path)}}>
-              {value.item}
+      {/* <Sidenav isOpen={isOpen} setIsOpen={setIsOpen}>
+        <div className="bg-Layouttrans  rounded-xl mb-10 mx-10 lg:hidden  text-Yellow z-30">
+          {headerOptions.map((option, index) => (
+            <div
+              key={index}
+              title={option.title}
+              onClick={() => {
+                setIsOpen(false);
+                window.location.href = option.href;
+              }}
+              className="about text-sm font-semibold text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
+            >
+              {option.title}
             </div>
-          );
-        })}
-        <button
-          type="button"
-          onClick={()=>{navigate("/#contactus")}}
-          className=" px-3 py-1  bg-Yellow flex items-center justify-center rounded-3xl cursor-pointer"
-        >
-          CONTACT US
-        </button>
-      </div>
+          ))}
+          <div className=" hover:bg-Layoutneon rounded-2xl hover:text-black">
+           <Tools onClick={()=>{setIsOpen(false)}}/>
+          </div>
+        </div>
+        <div className="flex items-center justify-center   max-sm:ml-4 sm:ml-[5vw]">
+          {PortfolioButton()}
+        </div>
+      </Sidenav> */}
+      
+      
+      
+      
+      
+     
     </div>
   );
 }

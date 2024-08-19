@@ -11,7 +11,7 @@ import topcem from "../assets/Clients/Topcem.png";
 import bajaj from "../assets/Clients/Bajaj.png";
 
 //Aboutus
-import aboutImg from "../assets/AboutUs/About.svg";
+import aboutImg from "../assets/AboutUs/About.png";
 
 //whyus
 import bentLine from "../assets/whyUs/bentLine.png"
@@ -21,22 +21,22 @@ import rectangle from "../assets/whyUs/Rectangle.png"
 import Line from "../assets/Others/Line.png"
 
 // Visa Services
-import visaImg1 from "../assets/VisaService/visaimg1.svg"
-import visaImg2 from "../assets/VisaService/visaimg2.svg"
-import visaImg3 from "../assets/VisaService/visaimg3.svg"
+import visaImg1 from "../assets/VisaService/visaimg1.png"
+import visaImg2 from "../assets/VisaService/visaimg2.png"
+import visaImg3 from "../assets/VisaService/visaimg3.png"
 
 //Services
 import airplane from '../assets/Services/airplane.png'
 import change from '../assets/Services/change.png'
 import honeymoon from '../assets/Services/honeymoon.png'
 import visa from '../assets/Services/visa.png'
-import bg from '../assets/Services/servicebg.svg'
+import bg from '../assets/Services/servicebg.png'
 //Tours
-import northEI from "../assets/Tours/NEI.svg"
-import Thailand from "../assets/Tours/Thailand.svg"
-import Dubai from "../assets/Tours/Dubai.svg"
+import northEI from "../assets/Tours/NEI.png"
+import Thailand from "../assets/Tours/Thailand.png"
+import Dubai from "../assets/Tours/Dubai.png"
 //Testimonial
-import bgTestimonial from "../assets/Testimonial/testimonialbg.svg"
+import bgTestimonial from "../assets/Testimonial/testimonialbg.png"
 //header
 import GK from "../assets/Others/logo.svg"
 export const allAssets = {

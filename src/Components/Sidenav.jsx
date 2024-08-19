@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { RxCross2 } from "react-icons/rx";
+import { RiMenu3Line } from "react-icons/ri";
 
 function Drawer({ children, isOpen, setIsOpen }) {
   const drawerRef = useRef();
@@ -29,7 +29,7 @@ function Drawer({ children, isOpen, setIsOpen }) {
       >
         <article className="relative w-80 pb-10 flex flex-col space-y-6 overflow-y-scroll h-full ">
           <div className="flex justify-end p-4">
-            <RxCross2
+            <RiMenu3Line size={30} 
               onClick={() => {
                 setIsOpen(false);
               }}
