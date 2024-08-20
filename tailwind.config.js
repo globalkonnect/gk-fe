@@ -10,8 +10,8 @@ export default {
       colors: {
         Yellow: "#FFCD3A",
         Offwhite: "#F2F2F2",
-        offBlack:"#2e2d2b",
-        offgray:"#d9d9d9"
+        offBlack: "#131212",
+        offgray: "#d9d9d9",
       },
     },
   },

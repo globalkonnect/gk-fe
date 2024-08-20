@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Tools = ({ onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +43,7 @@ const Tools = ({ onClick }) => {
 
   return (
     <div
-      className="text-sm h-[3rem] rounded-xl  hover:text-black flex items-center justify-center"
+      className="text-sm h-[3rem] rounded-xl hover:text-black flex items-center justify-center "
       ref={dropdownRef}
     >
       <div className="relative inline-block text-left">
@@ -58,12 +58,13 @@ const Tools = ({ onClick }) => {
             </span>
           </button>
           {isOpen && (
-            <div className="absolute  w-40 mt-1 origin-top-left bg-offBlack opacity-80 divide-y divide-gray-100 rounded-l-3xl rounded-b-3xl shadow-lg transition duration-600">
+            <div className="absolute w-40 mt-1 origin-top-left bg-offBlack opacity-80 divide-y divide-gray-100 rounded-l-3xl rounded-b-3xl shadow-lg transition duration-600 right-7">
               <div className="py-1 ">
                 {/* Uncomment and add more links as needed */}
                 {navItems.map((value, index) => {
                   return (
                     <div
+                      key={index}
                       onClick={() => {
                         pathLink(value.path);
                       }}
