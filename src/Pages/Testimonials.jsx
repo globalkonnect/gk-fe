@@ -7,23 +7,35 @@ function Testimonials() {
   const { bgTestimonial, Line } = allAssets;
 
   return (
-    <div id="testimonials"
-      className="pb-10 pt-[10rem] flex flex-col max-md:items-center  max-md:justify-center  bg-Offwhite font-Rammetto text-3xl bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgTestimonial})` }}
+    <div
+      id="testimonials"
+      className="relative pb-10 pt-[10rem] flex flex-col items-center justify-center font-Rammetto text-3xl bg-cover bg-center"
     >
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50" /> */}
-      
-      {/* Title */}
-      <p className="py-5 mx-20 text-white backdrop-blur-sm">
-        <span className="max-md:hidden">-</span>Testimonials
-        <span className="max-md:hidden">-</span>
-      </p>
+      {/* Black overlay with 70% opacity */}
+      <div
+        className="absolute inset-0 bg-black opacity-70 z-0"
+        style={{
+          backgroundImage: `url(${bgTestimonial})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
 
-      {/* Testimonial card section */}
-      <div className="flex items-center ">
+      <div className="relative z-10 text-center">
+        {/* Title */}
+        <p className="py-5 text-white backdrop-blur-sm">
+          <span className="hidden max-md:inline">-</span>Testimonials
+          <span className="hidden max-md:inline">-</span>
+        </p>
 
-        <img src={Line} className="bg-white lg:w-[35vw] max-md:hidden" />
-        <TestimonialCard />
+        {/* Testimonial card section */}
+        <div className="flex items-center justify-center">
+          <img
+            src={Line}
+            className="bg-white lg:w-[35vw] hidden max-md:inline"
+          />
+          <TestimonialCard />
+        </div>
       </div>
     </div>
   );

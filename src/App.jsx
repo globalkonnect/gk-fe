@@ -1,17 +1,17 @@
-import ContactUs from "./Pages/ContactUs";
-import Footer from "./Components/Footer";
-import Recognitions from "./Pages/Recognitions";
-import Clients from "./Pages/Clients";
-import About from "./Pages/About";
-import WhyUs from "./Pages/WhyChoose";
-import VisaServices from "./Pages/VisaServices";
-import Service from "./Pages/Service";
-import Tours from "./Pages/Tours";
-import Testimonials from "./Pages/Testimonials";
-import Header from "./Components/Header";
-import Home from "./Pages/Home";
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import About from "./Pages/About";
+import Clients from "./Pages/Clients";
+import ContactUs from "./Pages/ContactUs";
+import Home from "./Pages/Home";
+import Recognitions from "./Pages/Recognitions";
+import Testimonials from "./Pages/Testimonials";
+import Tours from "./Pages/Tours";
+import VisaServices from "./Pages/VisaServices";
+import WhyUs from "./Pages/WhyChoose";
+import Service from "./Pages/Service";
 function App() {
   const location = useLocation();
   useEffect(() => {
