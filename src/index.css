@@ -42,41 +42,75 @@
 }
 
 /* Apply the animations */
-.slide-in-right {
-  animation: slide-in-right 0.5s forwards;
+/* Wrapper to ensure content is contained */
+.tour-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem; /* Ensure border-radius is consistent */
 }
 
-.slide-out-left {
-  animation: slide-out-left 0.5s forwards;
-}
-
-.slide-in-left {
-  animation: slide-in-left 0.5s forwards;
-}
-
-.slide-out-right {
-  animation: slide-out-right 0.5s forwards;
-}
-
-/* Ensure swiper is centered properly */
-.swiper-container {
+/* Overlay styling */
+.tour-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  transition: height 0.25s ease;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  box-shadow: 0 0 76.8px 0.4rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
   justify-content: center;
+  color: white;
+  z-index: 1; /* Ensure overlay is above the image */
+  border-radius: inherit; /* Match the border-radius of the card */
 }
 
-/* Reset the scale for all slides */
+/* Show overlay on hover */
+.tour-card-wrapper:hover .tour-card-overlay {
+  height: 100%;
+}
+
+
+/* Overlay text styling */
+.tour-card-overlay .overlay-text {
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: white;
+}
+
+/* Reset the scale and apply border-radius for all slides */
 .swiper-slide .tour-card {
   transform: scale(1);
   transition: transform 0.3s ease;
+  border-radius: 1.5rem; /* Apply border-radius explicitly */
 }
 
-/* Apply zoom to only the centered slide */
+/* Apply zoom and additional styling to only the centered slide */
 .swiper-slide-active .tour-card {
-  transform: scale(1.1); /* Adjust scale as needed */
+  transform: scale(1.2); /* Adjust scale as needed */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  position: relative;
+  z-index: 1; /* Bring the active slide to the front */
+  border-radius: 1.5rem; /* Reapply border-radius explicitly */
 }
 
-/* (Optional) Slightly reduce the size of non-active slides for better contrast */
+/* Optional: Slightly reduce the size of non-active slides for better contrast */
 .swiper-slide:not(.swiper-slide-active) .tour-card {
   transform: scale(0.9);
+  border-radius: 1.5rem; /* Maintain border-radius on smaller slides */
 }
 
 /* Ensure no additional left or right margin is causing misalignment */

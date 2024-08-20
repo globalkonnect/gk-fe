@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { RiMenu3Line } from "react-icons/ri";
+
 import { allAssets } from "../Utility/baseAssets";
+import Tools from "./Sidenav";
 function Header() {
   const { GK } = allAssets;
   const [isOpen, setIsOpen] = React.useState(false);
@@ -25,9 +26,12 @@ function Header() {
       </div>
       
       <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button" className="lg:hidden  text-Yellow mr-10 z-30">
-        <RiMenu3Line size={30} />
+      <Tools />
       </button>
 
+
+
+{/* dektop nav items */}
       <div className="flex items-center justify-center mr-10 max-lg:hidden z-40">
         {navItems.map((value, index) => {
           return (

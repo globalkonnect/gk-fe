@@ -5,7 +5,7 @@ function Tours() {
   return (
     <div id="tours" className="bg-Offwhite py-[10rem] flex-col flex items-center justify-center font-Rammetto text-3xl">
       {/* Title */}
-      <p className="py-20">
+      <p className="">
         <span className="max-md:hidden">-</span>Tours
         <span className="max-md:hidden">-</span>
       </p>

@@ -13,7 +13,7 @@ function Testimonials() {
     >
       {/* Black overlay with 70% opacity */}
       <div
-        className="absolute inset-0 bg-black opacity-70 z-0"
+        className="absolute inset-0 bg-black  z-0"
         style={{
           backgroundImage: `url(${bgTestimonial})`,
           backgroundSize: "cover",
