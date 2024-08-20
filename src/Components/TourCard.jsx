@@ -23,9 +23,9 @@ function TourCard() {
           swiperRef.current.slidePrev();
         }}
       >
-        <img src={arrowLeft} alt="prev" className="h-12 max-md:h-10" />
+        <img src={arrowLeft} alt="prev" className="h-12 max-md:h-10 max-sm:h-8" />
       </div>
-      <div className="swiper-container flex items-center justify-center rounded-3xl w-[85vw] max-md:w-[65vw]">
+      <div className="swiper-container flex items-center justify-center rounded-3xl w-[85vw] md:w-[78vw] max-md:w-[66vw] max-sm:w-[50vw] sm:w-[60vw]">
         <Swiper
           modules={[Autoplay]}
           loop={true}
@@ -36,18 +36,21 @@ function TourCard() {
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
-            480: { slidesPerView: 1 },
+            640:{slidesPerView: 1},
             768: { slidesPerView: 1.5 },
+            880:{slidesPerView:1.7},
             1024: { slidesPerView: 2 },
-            1280: { slidesPerView: 3 },
+            1109:{slidesPerView:2.3},
+            1280: { slidesPerView: 2.5 },
+            1500: { slidesPerView: 3 },
           }}
         >
           {cards.map((value, index) => (
             <SwiperSlide key={index}>
-              <div className="tour-card-wrapper">
+              <div className="tour-card-wrapper sm:w-[23rem] ">
                 <img
                   src={value}
-                  className="tour-card"
+                  className="tour-card sm:w-[23rem]  "
                   alt={`Card ${index}`}
                 />
                 <div className="tour-card-overlay">
@@ -64,7 +67,7 @@ function TourCard() {
           swiperRef.current.slideNext();
         }}
       >
-        <img src={arrowRight} alt="next" className="h-12 max-md:h-10" />
+        <img src={arrowRight} alt="next" className="h-12 max-md:h-10 max-sm:h-8" />
       </div>
     </div>
   );
