@@ -1,52 +1,78 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import { RiMenu3Line } from "react-icons/ri";
+// import { useNavigate } from 'react-router-dom';
 
-function Drawer({ children, isOpen, setIsOpen }) {
-  const drawerRef = useRef();
+const Tools = ({onClick}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  // const navigate = useNavigate();
+  const dropdownRef = useRef(null);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
-  const closeDrawer = (e) => {
-    if (drawerRef.current === e.target) {
+  const handleNavigate = (path) => {
+    setIsOpen(false);
+    navigate(path);
+    onClick()
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
     }
   };
 
-  return (
-    <main
-      ref={drawerRef}
-      onClick={closeDrawer}
-      className={
-        " fixed overflow-hidden z-10 bg-black bg-opacity-50 inset-0 transform ease-in-out " +
-        (isOpen
-          ? " transition-opacity opacity-100 duration-500 translate-x-0  "
-          : " transition-all delay-500 opacity-0 -translate-x-full  ")
-      }
-    >
-      <section
-        className={
-          " w-80 left-0 absolute h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform  bg-Layoutblue" +
-          (isOpen ? " translate-x-0 " : " -translate-x-full ")
-        }
-      >
-        <article className="relative w-80 pb-10 flex flex-col space-y-6 overflow-y-scroll h-full ">
-          <div className="flex justify-end p-4">
-            <RiMenu3Line size={30} 
-              onClick={() => {
-                setIsOpen(false);
-              }}
-              className="h-[20px] w-[20px] text-white cursor-pointer"
-            />
-          </div>
-          {children}
-        </article>
-      </section>
-      <section
-        className=" w-screen h-full cursor-pointer "
-        onClick={() => {
-          setIsOpen(false);
-        }}
-      ></section>
-    </main>
-  );
-}
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
 
-export default Drawer;
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const navItems = [
+    { item: "HOME", path: "#home" },
+    { item: "ABOUT US", path: "#aboutus" },
+    { item: "TOURS", path: "#tours" },
+    { item: "CLIENTS", path: "#clients" },
+    { item: "VISA", path: "#visa" },
+  ];
+
+  return (
+    <div className="text-sm h-[3rem] rounded-xl  hover:text-black flex items-center justify-center" ref={dropdownRef}>
+      <div className="relative inline-block text-left">
+        <div>
+          <button
+            type="button"
+            className="inline-flex justify-center max-sm:hover:text-black items-center w-full py-2 font-semibold focus:outline-none text-sm h-[3rem] px-6 max-sm:w-full hover:bg-Layoutneon rounded-xl text-white hover:text-black"
+            onClick={toggleDropdown}
+          >
+            <span className='max-sm:ml-4 sm:ml-[3vw] md:ml-0'><RiMenu3Line size={30} /></span>
+            
+          </button>
+          {isOpen && (
+            <div className="absolute  w-40 mt-1 origin-top-left bg-offBlack divide-y divide-gray-100 rounded-md shadow-lg transition duration-600">
+              <div className="py-1">
+                {/* Uncomment and add more links as needed */}
+              {navItems.map((value,index)=>{return <a 
+                  onClick={() => handleNavigate("/link-shortener")}
+                  className="block px-4 py-2 text-white text-sm hover:bg-gray-100 cursor-pointer border-b-2 border-gray-700"
+                >
+                 {value.item}
+                </a>})   }
+                <a 
+                  onClick={() => handleNavigate("/link-shortener")}
+                  className="block px-4 py-2 text-white text-sm hover:bg-gray-100 cursor-pointer border-b-2 border-gray-700"
+                >
+                 Contact Us
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Tools;

@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { allAssets } from "../Utility/baseAssets";
 import "swiper/css"; // Core Swiper CSS
 import "swiper/css/autoplay"; // Autoplay module CSS (if required)
 import { Autoplay } from "swiper/modules"; // Correct module path
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useRef } from "react";
 
 function ServiceCard() {
   const airplane = allAssets.airplane;
   const change = allAssets.change;
   const honeymoon = allAssets.honeymoon;
   const visa = allAssets.visa;
-  const swiperRef = useRef();
+  const swiperRef = useRef(null);
   const arrowLeft = allAssets.arrowLeft;
   const arrowRight = allAssets.arrowRight;
 
@@ -28,6 +27,7 @@ function ServiceCard() {
 
   useEffect(() => {
     const handleSlideChange = () => {
+      if (!swiperRef.current) return;
       const slides = swiperRef.current.slides;
       slides.forEach((slide, index) => {
         if (index === swiperRef.current.activeIndex) {
@@ -40,30 +40,29 @@ function ServiceCard() {
       });
     };
 
-    const swiperInstance = swiperRef.current;
-    swiperInstance.on("slideChange", handleSlideChange);
-
-    // Initial scale setup
-    handleSlideChange();
+    if (swiperRef.current) {
+      swiperRef.current.on("slideChange", handleSlideChange);
+      handleSlideChange();
+    }
 
     // Clean up event listener on component unmount
     return () => {
-      swiperInstance.off("slideChange", handleSlideChange);
+      if (swiperRef.current) {
+        swiperRef.current.off("slideChange", handleSlideChange);
+      }
     };
   }, []);
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="relative flex items-center justify-center">
       <div
-        className="swiper-button-prev flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
-        onClick={() => {
-          swiperRef.current.slidePrev();
-        }}
+        className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full z-10"
+        onClick={() => swiperRef.current?.slidePrev()}
       >
         <img src={arrowLeft} alt="prev" className="h-12 max-md:h-10" />
       </div>
 
-      <div className="w-[85vw]">
+      <div className="md:w-[80vw] w-full">
         <Swiper
           // modules={[Autoplay]}
           loop={true}
@@ -76,23 +75,23 @@ function ServiceCard() {
           }}
           breakpoints={{
             0: { slidesPerView: 1 }, // Full-width on small screens
-            480: { slidesPerView: 1 }, // Slightly zoomed out on small tablets
-            768: { slidesPerView: 1.5 }, // 1.5 slides visible on tablets
-            1024: { slidesPerView: 2 }, // 2 slides visible on desktops
-            1280: { slidesPerView: 3 }, // 3 slides visible on larger screens
+            480: { slidesPerView: 2 }, // Slightly zoomed out on small tablets
+            768: { slidesPerView: 3 }, // 1.5 slides visible on tablets
+            1000: { slidesPerView: 3 }, // 2 slides visible on desktops
+            1280: { slidesPerView: 4 }, // 3 slides visible on larger screens
           }}
         >
           {tools.map((value, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="flex justify-center">
               <div className="flex-col items-center justify-center text-center text-white text-xl">
-                <div className="text-xl m-10 rounded-full bg-Yellow flex items-center justify-center size-[10rem] shadow-2xl">
+                <div className="text-xl m-6 rounded-full bg-Yellow flex items-center justify-center w-24 h-24 max-md:w-20 max-md:h-20 shadow-2xl">
                   <img
                     src={value.icon}
-                    className="p-2 size-28"
+                    className="size-20 p-2"
                     alt={value.title}
                   />
                 </div>
-                <p className="w-[15rem]">{value.title}</p>
+                <p className="w-[15rem] max-md:w-[200px] pb-10">{value.title}</p>
               </div>
             </SwiperSlide>
           ))}
@@ -100,10 +99,8 @@ function ServiceCard() {
       </div>
 
       <div
-        className="swiper-button-next flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
-        onClick={() => {
-          swiperRef.current.slideNext();
-        }}
+        className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full z-10"
+        onClick={() => swiperRef.current?.slideNext()}
       >
         <img src={arrowRight} alt="next" className="h-12 max-md:h-10" />
       </div>
