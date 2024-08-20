@@ -11,7 +11,7 @@ function Testimonials() {
       className="pb-10 pt-[10rem] flex flex-col max-md:items-center  max-md:justify-center  bg-Offwhite font-Rammetto text-3xl bg-cover bg-center"
       style={{ backgroundImage: `url(${bgTestimonial})` }}
     >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50" />
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50" /> */}
       
       {/* Title */}
       <p className="py-5 mx-20 text-white backdrop-blur-sm">

@@ -31,7 +31,7 @@ function App() {
               <About />
               <Tours />
               <WhyUs />
-              {/* <Service /> */}
+              <Service />
               <Clients />
               <VisaServices />
               <Recognitions />

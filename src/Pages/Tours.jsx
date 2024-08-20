@@ -11,7 +11,7 @@ function Tours() {
       </p>
 
       {/* Tour card section */}
-      <div className="my-10">
+      <div className="mt-12">
         <TourCard />
       </div>
     </div>

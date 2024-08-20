@@ -30,7 +30,7 @@ import airplane from '../assets/Services/airplane.png'
 import change from '../assets/Services/change.png'
 import honeymoon from '../assets/Services/honeymoon.png'
 import visa from '../assets/Services/visa.png'
-import bg from '../assets/Services/servicebg.png'
+import bg from '../assets/Services/ServiceBackground.webp'
 //Tours
 import northEI from "../assets/Tours/NEI.png"
 import Thailand from "../assets/Tours/Thailand.png"
@@ -39,6 +39,9 @@ import Dubai from "../assets/Tours/Dubai.png"
 import bgTestimonial from "../assets/Testimonial/testimonialbg.png"
 //header
 import GK from "../assets/Others/logo.svg"
+//others
+import arrowLeft from "../assets/Others/leftarrow.png" 
+import arrowRight from "../assets/Others/rightarrow.png"
 export const allAssets = {
   //Recognitions
   verticalLine,
@@ -74,5 +77,8 @@ Dubai,
 //Testimonial
 bgTestimonial,
 //header
-GK
+GK,
+//others
+arrowLeft,
+arrowRight
 };

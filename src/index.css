@@ -57,3 +57,32 @@
 .slide-out-right {
   animation: slide-out-right 0.5s forwards;
 }
+
+/* Ensure swiper is centered properly */
+.swiper-container {
+  justify-content: center;
+}
+
+/* Reset the scale for all slides */
+.swiper-slide .tour-card {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Apply zoom to only the centered slide */
+.swiper-slide-active .tour-card {
+  transform: scale(1.1); /* Adjust scale as needed */
+}
+
+/* (Optional) Slightly reduce the size of non-active slides for better contrast */
+.swiper-slide:not(.swiper-slide-active) .tour-card {
+  transform: scale(0.9);
+}
+
+/* Ensure no additional left or right margin is causing misalignment */
+.swiper-slide {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
