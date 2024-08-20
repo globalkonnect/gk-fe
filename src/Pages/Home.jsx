@@ -6,14 +6,9 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import imag1 from "../assets/test/1.jpg";
-import imag2 from "../assets/test/2.jpg";
-import imag3 from "../assets/test/3.jpg";
-import imag4 from "../assets/test/4.jpg";
-import imag5 from "../assets/test/5.jpg";
 import BackgroundSwitcher from "../Components/BackgroundSwitcher";
 import { globalKonnect } from "../Utility/data";
-
+import { allAssets } from "../Utility/baseAssets";
 const Home = () => {
   const swiperRef = useRef();
   const autoPlayDelayDuration = 1000;
@@ -21,12 +16,28 @@ const Home = () => {
   const isTablet = useMediaQuery({ query: "(max-width:768px)" });
   const [direction, setDirection] = useState("up");
   const homeData = globalKonnect.home;
-  const images = [imag1, imag2, imag3, imag4, imag5];
+const imag1=allAssets.NEIbg
+const imag2=allAssets.Dubaibg
+const imag3=allAssets.Singaporebg
+const imag4=allAssets.Thailandbg
+const imag5=allAssets.Balibg
+const imag6 = allAssets.Homeimg1
+
+const imag8 = allAssets.Homeimg3
+
+const imag10 = allAssets.Homeimg5
+
+const imag12 = allAssets.Homeimg7
+
+const imag14 = allAssets.Homeimg9
+
+  const bgimages = [imag1, imag2, imag3, imag4, imag5];
+  const cardimages = [imag6,imag8,imag10,imag12,imag14]
 
   const next = () => {
     if (isTablet) {
       const nextIndex = currentIndex + 1;
-      if (nextIndex >= images.length) {
+      if (nextIndex >= bgimages.length) {
         setCurrentIndex(0);
       } else {
         setCurrentIndex(nextIndex);
@@ -54,7 +65,7 @@ const Home = () => {
       className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center"
     >
       <BackgroundSwitcher
-        images={images}
+        images={bgimages}
         currentIndex={currentIndex}
         direction={direction}
       />
@@ -62,7 +73,7 @@ const Home = () => {
       <div className="absolute h-screen flex flex-col items-center justify-start max-md:justify-center max-md:items-center pt-[25vh]">
         <div className="w-[70vw] max-md:w-[90vw] h-[150px] pb-48 max-md:pb-0">
           <TextTransition
-            className="text-[10vh] max-md:text-[80px] max-sm:text-[55px] text-white font-Rammetto text-start max-md:text-center w-[70vw]"
+            className="text-[7.5vh] max-md:text-[60px] max-sm:text-[45px] text-white font-Rammetto text-start max-md:text-center w-[70vw]"
             springConfig={presets.wobbly}
             direction={direction}
             style={{
@@ -84,7 +95,7 @@ const Home = () => {
               <p className="h-[90px] max-md:h-[150px] text-xl max-md:text-[30px] max-sm:text-[25px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
                 {homeData[currentIndex].description}
               </p>
-              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[18px] max-md:pl-10 max-sm:pl-0">
+              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[15px] max-md:pl-10 max-sm:pl-0">
                 {homeData[currentIndex].tags}
                 <span className="pt-5">
                   <button
@@ -128,7 +139,7 @@ const Home = () => {
                 1536: { slidesPerView: 1.8 },
               }}
             >
-              {images.map((value, index) => {
+              {cardimages.map((value, index) => {
                 const isCurrent = swiperRef.current?.realIndex === index;
                 return (
                   <SwiperSlide key={index}>

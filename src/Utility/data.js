@@ -1,34 +1,35 @@
 export const globalKonnect = {
   home: [
     {
-      title: "Rajasthan",
+      title: "North East India",
       description:
-        "A land of grand palaces, vibrant festivals, and vast desert landscapes, offering a royal experience.",
-      tags: "HISTORY | CULTURE",
+        "A mesmerizing tapestry of vibrant cultures, breathtaking landscapes, and untamed natural beauty.",
+      tags: "ADVENTURE | EXPLORATION",
+    },
+    
+    {
+      title: "Dubai",
+      description:
+        "A dazzling cityscape where modern luxury meets traditional charm, offering endless entertainment and innovation.",
+      tags: "GETAWAY | WANDERLUST",
     },
     {
-      title: "Kerala",
+      title: "Singapore",
       description:
-        "A tropical paradise known for its serene backwaters, lush greenery, and rich cultural heritage.",
-      tags: "NATURE | WELLNESS",
+        "A dynamic island city-state known for  its pristine skyline, lush gardens, and rich cultural tapestry.",
+      tags: "JOURNEYS | EXPLORATIONS",
     },
     {
-      title: "Ladaakh",
+      title: "Thailand",
       description:
-        "A rugged, high-altitude region, offering stunning vistas of mountains, monasteries, and deep valleys.",
-      tags: "ADVENTURE | SPIRITUALITY",
+        "A tropical paradise brimming with golden temples, vibrant street markets, and stunning beaches.",
+      tags: "ESCAPADE | ADVENTURE ",
     },
     {
-      title: "Andaman",
+      title: "Bali",
       description:
-        "Pristine beaches, crystal-clear waters, and vibrant coral reefs, making it a haven for nature lovers.",
-      tags: "BEACHES | WATER SPORTS",
-    },
-    {
-      title: "Sikkim",
-      description:
-        "A hidden gem in the Himalayas, offering tranquil monasteries, lush forests, and breathtaking views.",
-      tags: "SPIRITUALITY | NATURE",
+        "An enchanting island haven renowned for its lush rice terraces, pristine beaches, and captivating cultural heritage.",
+      tags: "EXPEDITION | DISCOVERY",
     },
   ],
   aboutUs: {
