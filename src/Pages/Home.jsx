@@ -7,8 +7,8 @@ import "swiper/css/autoplay";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import BackgroundSwitcher from "../Components/BackgroundSwitcher";
-import { globalKonnect } from "../Utility/data";
 import { allAssets } from "../Utility/baseAssets";
+import { globalKonnect } from "../Utility/data";
 const Home = () => {
   const swiperRef = useRef();
   const autoPlayDelayDuration = 1000;
@@ -16,28 +16,26 @@ const Home = () => {
   const isTablet = useMediaQuery({ query: "(max-width:768px)" });
   const [direction, setDirection] = useState("up");
   const homeData = globalKonnect.home;
-const imag1=allAssets.NEIbg
-const imag2=allAssets.Dubaibg
-const imag3=allAssets.Singaporebg
-const imag4=allAssets.Thailandbg
-const imag5=allAssets.Balibg
-const imag6 = allAssets.Homeimg1
+  const bgImages = [
+    allAssets.NEIbg,
+    allAssets.Dubaibg,
+    allAssets.Singaporebg,
+    allAssets.Thailandbg,
+    allAssets.Balibg,
+  ];
 
-const imag8 = allAssets.Homeimg3
-
-const imag10 = allAssets.Homeimg5
-
-const imag12 = allAssets.Homeimg7
-
-const imag14 = allAssets.Homeimg9
-
-  const bgimages = [imag1, imag2, imag3, imag4, imag5];
-  const cardimages = [imag6,imag8,imag10,imag12,imag14]
+  const cardImages = [
+    allAssets.Homeimg1,
+    allAssets.Homeimg3,
+    allAssets.Homeimg5,
+    allAssets.Homeimg7,
+    allAssets.Homeimg9,
+  ];
 
   const next = () => {
     if (isTablet) {
       const nextIndex = currentIndex + 1;
-      if (nextIndex >= bgimages.length) {
+      if (nextIndex >= bgImages.length) {
         setCurrentIndex(0);
       } else {
         setCurrentIndex(nextIndex);
@@ -65,7 +63,7 @@ const imag14 = allAssets.Homeimg9
       className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center"
     >
       <BackgroundSwitcher
-        images={bgimages}
+        images={bgImages}
         currentIndex={currentIndex}
         direction={direction}
       />
@@ -74,7 +72,7 @@ const imag14 = allAssets.Homeimg9
         <div className="w-[70vw] max-md:w-[90vw] h-[150px] pb-48 max-md:pb-0">
           <TextTransition
             className="text-[7.5vh] max-md:text-[60px] max-sm:text-[45px] text-white font-Rammetto text-start max-md:text-center w-[70vw]"
-            springConfig={presets.wobbly}
+            springConfig={presets.gentle}
             direction={direction}
             style={{
               width: "100%",
@@ -139,7 +137,7 @@ const imag14 = allAssets.Homeimg9
                 1536: { slidesPerView: 1.8 },
               }}
             >
-              {cardimages.map((value, index) => {
+              {cardImages.map((value, index) => {
                 const isCurrent = swiperRef.current?.realIndex === index;
                 return (
                   <SwiperSlide key={index}>
