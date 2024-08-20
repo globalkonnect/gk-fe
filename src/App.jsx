@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
+import Tours from "./Pages/Tours";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -20,7 +21,7 @@ function App() {
             <div>
               <Home />
               {/* <About /> */}
-              {/* <Tours /> */}
+              <Tours />
               {/* <WhyUs /> */}
               {/* <Service /> */}
               {/* <Clients /> */}
