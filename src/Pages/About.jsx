@@ -13,11 +13,17 @@ function About() {
       className="w-full bg-black font-Alata text-white text-lg flex items-center justify-evenly py-[10rem]"
     >
       {/* Text section */}
-      <div className="flex-col py-5 flex items-start justify-evenly max-lg:text-base max-lg:items-center max-lg:text-center max-lg:w-[80vw] lg:w-[35vw] px-5 leading-relaxed">
+      <div className="flex-col py-5 flex items-start justify-evenly max-lg:text-base max-lg:items-center max-lg:text-center max-lg:w-[80vw] lg:w-[35vw] px-5 leading-relaxed"
+       data-aos="fade-right"
+       data-aos-offset="200"
+       data-aos-easing="ease"
+       data-aos-duration="1000"
+      >
         {/* Title */}
         <p
           className="font-Rammetto text-3xl text-yellow-500 py-5 max-lg:text-center max-lg:w-full"
           style={{ textShadow: "white 2px 2px" }}
+         
         >
           <span className="lg:hidden">-</span>About Us-
         </p>
@@ -31,7 +37,10 @@ function About() {
         <p>{description}</p>
       </div>
       {/* Image section */}
-      <img src={img} alt="About Us" className="max-lg:hidden h-[470px]" />
+      <img src={img} alt="About Us" className="max-lg:hidden h-[470px]"  data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-easing="ease"
+          data-aos-duration="1000"/>
     </div>
   );
 }

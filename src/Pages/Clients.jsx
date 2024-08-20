@@ -10,7 +10,12 @@ function Clients() {
   return (
     <div id="clients" className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite py-[9rem]">
       {/* Clients title */}
-      <p className="py-5 mx-20  backdrop-blur-sm">
+      <p className="py-5 mx-20  backdrop-blur-sm"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-easing="ease"
+      data-aos-duration="1000"
+      >
         <span className="max-md:hidden">-</span>Clients
         <span className="max-md:hidden">-</span>
       </p>

@@ -12,13 +12,13 @@ function TestimonialCard() {
   const arrowLeft = allAssets.arrowLeft;
   const arrowRight = allAssets.arrowRight;
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className="py-5">
         {testimonials.map((value, index) => {
           return (
             <div
               key={index}
-              className="h-[10rem] w-[35rem] my-10 p-5 bg-white rounded-3xl flex items-center justify-center font-Alata text-lg max-md:hidden"
+              className="h-[10rem] w-[32rem] my-10 p-5  bg-white rounded-3xl flex items-center justify-center font-Alata text-lg max-md:hidden"
             >
               {value}
             </div>
@@ -27,20 +27,20 @@ function TestimonialCard() {
       </div>
 
       {/* mobile */}
-      <div className="flex items-center justify-evenly w-full overflow-x-hidden">
+      <div className="flex items-center justify-evenly w-[100vw] ">
       <div
-        className="swiper-button-prev md:hidden flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+        className="swiper-button-prev md:hidden   flex items-center justify-center  cursor-pointer  rounded-full"
         onClick={() => {
           swiperRef.current.slidePrev();
         }}
       >
-        <img src={arrowLeft} alt="prev" className="h-12 max-md:h-10" />
+        <img src={arrowLeft} alt="prev" className="h-12 max-md:h-10 max-sm:h-[30px] " />
       </div>
       <div className="w-[80vw] flex items-center justify-evenly md:hidden font-Alata text-lg">
         <Swiper
-          // modules={[Autoplay]}
+          modules={[Autoplay]}
           loop={true}
-          autoplay={{ delay: 2 }}
+          autoplay={{ delay: 5 }}
           speed={3000}
           centeredSlides={true}
           centeredSlidesBounds={true}
@@ -49,9 +49,10 @@ function TestimonialCard() {
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
-            611: { slidesPerView: 1.5 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 2.5 },
+            440:{slidesPerView:1.4},
+            455:{slidesPerView: 1.5},
+          
+            
           }}
         >
           {testimonials.map((value, index) => {
@@ -59,7 +60,7 @@ function TestimonialCard() {
               <SwiperSlide>
                 <div
                   key={index}
-                  className="h-[25rem] w-[20rem] max-sm:h-[20rem] max-sm:w-[20rem] my-10 p-5 bg-white rounded-3xl flex items-center justify-center  "
+                  className="h-[20rem]  max-sm:h-[13rem] max-sm:w-[15rem] sm:w-[20rem] md:w-[30rem]   max-sm:text-xs my-10 p-5 bg-white rounded-3xl flex items-center justify-center  "
                 >
                   {value}
                 </div>
@@ -69,15 +70,15 @@ function TestimonialCard() {
         </Swiper>
       </div>
       <div
-        className="swiper-button-next md:hidden flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+        className="swiper-button-next md:hidden  flex items-center justify-center  cursor-pointer  rounded-full"
         onClick={() => {
           swiperRef.current.slideNext();
         }}
       >
-        <img src={arrowRight} alt="next" className="h-12 max-md:h-10" />
+        <img src={arrowRight} alt="next" className="h-12 max-md:h-10 max-sm:h-[30px] " />
       </div>
       </div>
-    </>
+    </div>
   );
 }
 

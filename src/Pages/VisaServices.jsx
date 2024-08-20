@@ -7,9 +7,18 @@ function VisaServices() {
   const { Line } = allAssets;
 
   return (
-    <div id="visa" className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-[10rem]">
+    <div
+      id="visa"
+      className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-[10rem]"
+    >
       {/* Title */}
-      <p className="py-10">
+      <p
+        className="py-10"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
+      >
         <span className="max-md:hidden">-</span>Visa Services
         <span className="max-md:hidden">-</span>
       </p>
@@ -19,8 +28,9 @@ function VisaServices() {
         <VisaServiceCard />
       </div>
 
-      {/* Success rate text */}
-      <p className="py-10">0% Failure</p>
+      <p className="py-10 text-4xl font-bold text-stroke text-shadow">
+        0% Failure
+      </p>
 
       {/* Line and text section */}
       <div className="flex w-full items-center justify-center">

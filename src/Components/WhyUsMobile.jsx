@@ -18,6 +18,8 @@ function WhyUsMobile() {
               className={`flex -ml-[28px] ${
                 index == 0 ? "mt-[80px]" : "mt-[60px]"
               } `}
+            
+           
             >
               <p className="bg-white size-[3rem] flex items-center justify-center rounded-full font-Rammetto text-2xl  text-Yellow">
                 {/* bullet index number */}

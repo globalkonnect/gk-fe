@@ -10,7 +10,80 @@ function TourCard() {
   const card1 = allAssets.northEI;
   const card2 = allAssets.Dubai;
   const card3 = allAssets.Thailand;
-  const cards = [card1, card2, card3, card1, card2, card3];
+  const cards = [
+    {
+      card: card1,
+      name: "North East India",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card2,
+      name: " Dubai",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card3,
+      name: "Thailand",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card1,
+      name: "North East India",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card2,
+      name: " Dubai",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card3,
+      name: "Thailand",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card1,
+      name: "North East India",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card2,
+      name: " Dubai",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card3,
+      name: "Thailand",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card1,
+      name: "North East India",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card2,
+      name: " Dubai",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+    {
+      card: card3,
+      name: "Thailand",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minima?",
+    },
+  ];
   const arrowLeft = allAssets.arrowLeft;
   const arrowRight = allAssets.arrowRight;
   const swiperRef = useRef();
@@ -23,7 +96,11 @@ function TourCard() {
           swiperRef.current.slidePrev();
         }}
       >
-        <img src={arrowLeft} alt="prev" className="h-12 max-md:h-10 max-sm:h-8" />
+        <img
+          src={arrowLeft}
+          alt="prev"
+          className="h-12 max-md:h-10 max-sm:h-8"
+        />
       </div>
       <div className="swiper-container flex items-center justify-center rounded-3xl w-[85vw] md:w-[78vw] max-md:w-[66vw] max-sm:w-[50vw] sm:w-[60vw]">
         <Swiper
@@ -36,11 +113,11 @@ function TourCard() {
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
-            640:{slidesPerView: 1},
+            640: { slidesPerView: 1 },
             768: { slidesPerView: 1.5 },
-            880:{slidesPerView:1.7},
+            880: { slidesPerView: 1.7 },
             1024: { slidesPerView: 2 },
-            1109:{slidesPerView:2.3},
+            1109: { slidesPerView: 2.3 },
             1280: { slidesPerView: 2.5 },
             1500: { slidesPerView: 3 },
           }}
@@ -49,12 +126,12 @@ function TourCard() {
             <SwiperSlide key={index}>
               <div className="tour-card-wrapper sm:w-[23rem] ">
                 <img
-                  src={value}
-                  className="tour-card sm:w-[23rem]  "
+                  src={value.card}
+                  className="tour-card h-full w-full "
                   alt={`Card ${index}`}
                 />
                 <div className="tour-card-overlay">
-                  <div className="overlay-text">Your Text Here</div>
+                  <div className="overlay-text ">{value.name}</div>
                 </div>
               </div>
             </SwiperSlide>
@@ -67,7 +144,11 @@ function TourCard() {
           swiperRef.current.slideNext();
         }}
       >
-        <img src={arrowRight} alt="next" className="h-12 max-md:h-10 max-sm:h-8" />
+        <img
+          src={arrowRight}
+          alt="next"
+          className="h-12 max-md:h-10 max-sm:h-8"
+        />
       </div>
     </div>
   );

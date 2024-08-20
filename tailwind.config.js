@@ -15,5 +15,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-stroke": {
+          "-webkit-text-stroke": "1px black",
+          "color": "white",
+        },
+        ".text-shadow": {
+          "text-shadow": "2px 2px 0px rgba(0, 0, 0, 0.1)",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };

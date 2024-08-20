@@ -46,7 +46,7 @@ const Tools = ({ onClick }) => {
       className="text-sm h-[3rem] rounded-xl hover:text-black flex items-center justify-center "
       ref={dropdownRef}
     >
-      <div className="relative inline-block text-left">
+      <div className="relative inline-block text-center  ">
         <div>
           <button
             type="button"
@@ -58,7 +58,7 @@ const Tools = ({ onClick }) => {
             </span>
           </button>
           {isOpen && (
-            <div className="absolute w-40 mt-1 origin-top-left bg-offBlack opacity-80 divide-y divide-gray-100 rounded-l-3xl rounded-b-3xl shadow-lg transition duration-600 right-7">
+            <div className="absolute w-40 mt-1 flex items-center justify-center origin-top-left bg-offBlack opacity-80 divide-y divide-gray-100 rounded-l-3xl rounded-b-3xl shadow-lg transition duration-600 right-7">
               <div className="py-1 ">
                 {/* Uncomment and add more links as needed */}
                 {navItems.map((value, index) => {
@@ -68,18 +68,21 @@ const Tools = ({ onClick }) => {
                       onClick={() => {
                         pathLink(value.path);
                       }}
-                      className="block px-4 py-2 text-Yellow text-sm hover:bg-gray-100 cursor-pointer border-b-2 border-gray-700"
+                      className="block  py-2 text-Yellow text-sm hover:bg-gray-100 cursor-pointer border-b-2 border-gray-700"
                     >
                       {value.item}
                     </div>
                   );
                 })}
-                <div
-                  onClick={() => handleNavigate("/link-shortener")}
-                  className="block px-4 py-2 text-white text-sm hover:bg-gray-100 cursor-pointer"
+                <button
+                  type="button"
+                  onClick={() => {
+                    navigate("/#contactus");
+                  }}
+                  className="px-3 py-1 my-4 bg-Yellow text-offBlack flex items-center justify-center rounded-3xl cursor-pointer"
                 >
-                  Contact Us
-                </div>
+                  CONTACT US
+                </button>
               </div>
             </div>
           )}

@@ -41,8 +41,6 @@
   }
 }
 
-/* Apply the animations */
-/* Wrapper to ensure content is contained */
 .tour-card-wrapper {
   position: relative;
   overflow: hidden;
@@ -56,7 +54,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 0;
+  height: 0; /* Slightly visible overlay by default */
   transition: height 0.25s ease;
   background: linear-gradient(
     180deg,
@@ -64,7 +62,6 @@
     rgba(0, 0, 0, 0.6) 50%,
     rgba(0, 0, 0, 0.9) 100%
   );
-  box-shadow: 0 0 76.8px 0.4rem rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,30 +70,30 @@
   border-radius: inherit; /* Match the border-radius of the card */
 }
 
-/* Show overlay on hover */
-.tour-card-wrapper:hover .tour-card-overlay {
-  height: 100%;
-}
-
-
 /* Overlay text styling */
+/* Overlay text styling with shadow and highlight */
 .tour-card-overlay .overlay-text {
-  font-size: 20px;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), /* Slight shadow for better readability */
+               0 0 15px rgba(255, 255, 255, 0.6); /* Glow effect */
   text-align: center;
   position: absolute;
-  top: 50%;
+  bottom: 10%; /* Slightly visible from the bottom */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   width: 80%;
   color: white;
+  opacity: 0.6; /* Slightly visible text by default */
+  transition: opacity 0.25s ease, text-shadow 0.25s ease; /* Smooth transition for text visibility and shadow */
 }
 
-/* Reset the scale and apply border-radius for all slides */
-.swiper-slide .tour-card {
-  transform: scale(1);
-  transition: transform 0.3s ease;
-  border-radius: 1.5rem; /* Apply border-radius explicitly */
+/* Full visibility and enhanced shadow on hover */
+.swiper-slide-active .tour-card-wrapper:hover .overlay-text {
+  opacity: 1; /* Fully visible text on hover */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), /* More pronounced shadow */
+               0 0 20px rgba(255, 255, 255, 0.8); /* More intense glow */
 }
+
 
 /* Apply zoom and additional styling to only the centered slide */
 .swiper-slide-active .tour-card {
@@ -105,6 +102,24 @@
   position: relative;
   z-index: 1; /* Bring the active slide to the front */
   border-radius: 1.5rem; /* Reapply border-radius explicitly */
+}
+
+/* Enable hover effect and full overlay expansion for the center (active) slide */
+.swiper-slide-active .tour-card-wrapper:hover .tour-card-overlay {
+  height: 100%; /* Expand overlay to full height on hover */
+}
+
+.swiper-slide-active .tour-card-wrapper:hover .overlay-text {
+  opacity: 1; /* Fully visible text on hover */
+}
+
+/* Disable hover effect and overlay text for side slides */
+.swiper-slide:not(.swiper-slide-active) .tour-card-wrapper:hover .tour-card-overlay {
+  height: 20%; /* Keep overlay at the bottom for side slides */
+}
+
+.swiper-slide:not(.swiper-slide-active) .tour-card-overlay .overlay-text {
+  opacity: 0; /* Hide text for side slides */
 }
 
 /* Optional: Slightly reduce the size of non-active slides for better contrast */
@@ -118,5 +133,3 @@
   margin-left: 0;
   margin-right: 0;
 }
-
-

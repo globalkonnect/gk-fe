@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -16,6 +18,8 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
+    AOS.init();
+    AOS.refresh();
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
