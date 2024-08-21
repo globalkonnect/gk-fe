@@ -1,14 +1,17 @@
+import { useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import "swiper/css"; // Core Swiper CSS
 import "swiper/css/autoplay"; // Autoplay module CSS (if required)
 import { Autoplay } from "swiper/modules"; // Correct module path
 import { Swiper, SwiperSlide } from "swiper/react";
 import { allAssets } from "../Utility/baseAssets";
-import { useRef, useEffect } from "react";
 
 function VisaServiceCard() {
   const image1 = allAssets.visaImg1;
   const image2 = allAssets.visaImg2;
   const image3 = allAssets.visaImg3;
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+
   const visaImages = [
     { image: image1, name: "Singapore" },
     { image: image2, name: "Bali" },
@@ -27,15 +30,11 @@ function VisaServiceCard() {
         if (index === swiperRef.current.activeIndex) {
           slide.querySelector(".overlay").style.opacity = "0.6"; // Show overlay on centered slide
           slide.style.transform = "scale(1.2)"; // Zoom the centered slide
-          slide.style.borderRadius = "1.5rem"; // Maintain border radius on zoom
-          slide.style.transition =
-            "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
+          slide.style.transition = "transform 0.5s ease, opacity 0.5s ease, "; // Smooth transition
         } else {
           slide.querySelector(".overlay").style.opacity = "0"; // Hide overlay on other slides
           slide.style.transform = "scale(1)"; // Reset scale on other slides
-          slide.style.borderRadius = "1rem"; // Reset border radius on other slides
-          slide.style.transition =
-            "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
+          slide.style.transition = "transform 0.5s ease, opacity 0.5s ease, "; // Smooth transition
         }
       });
     };
@@ -57,6 +56,7 @@ function VisaServiceCard() {
           modules={[Autoplay]}
           loop={true}
           autoplay={{ delay: 0 }}
+          slidesOffsetBefore={isMobile ? 50 : 100}
           speed={3000}
           centeredSlides={true}
           centeredSlidesBounds={true}

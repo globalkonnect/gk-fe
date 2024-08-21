@@ -11,7 +11,7 @@ import { allAssets } from "../Utility/baseAssets";
 import { globalKonnect } from "../Utility/data";
 const Home = () => {
   const swiperRef = useRef();
-  const autoPlayDelayDuration = 1000;
+  const autoPlayDelayDuration = 2000;
   const [currentIndex, setCurrentIndex] = useState(0);
   const isTablet = useMediaQuery({ query: "(max-width:768px)" });
   const [direction, setDirection] = useState("up");

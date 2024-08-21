@@ -74,8 +74,8 @@
 /* Overlay text styling with shadow and highlight */
 .tour-card-overlay .overlay-text {
   font-size: 40px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), /* Slight shadow for better readability */
-               0 0 15px rgba(255, 255, 255, 0.6); /* Glow effect */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8),
+    /* Slight shadow for better readability */ 0 0 15px rgba(255, 255, 255, 0.6); /* Glow effect */
   text-align: center;
   position: absolute;
   bottom: 10%; /* Slightly visible from the bottom */
@@ -90,10 +90,9 @@
 /* Full visibility and enhanced shadow on hover */
 .swiper-slide-active .tour-card-wrapper:hover .overlay-text {
   opacity: 1; /* Fully visible text on hover */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), /* More pronounced shadow */
-               0 0 20px rgba(255, 255, 255, 0.8); /* More intense glow */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9),
+    /* More pronounced shadow */ 0 0 20px rgba(255, 255, 255, 0.8); /* More intense glow */
 }
-
 
 /* Apply zoom and additional styling to only the centered slide */
 .swiper-slide-active .tour-card {
@@ -114,7 +113,9 @@
 }
 
 /* Disable hover effect and overlay text for side slides */
-.swiper-slide:not(.swiper-slide-active) .tour-card-wrapper:hover .tour-card-overlay {
+.swiper-slide:not(.swiper-slide-active)
+  .tour-card-wrapper:hover
+  .tour-card-overlay {
   height: 20%; /* Keep overlay at the bottom for side slides */
 }
 
