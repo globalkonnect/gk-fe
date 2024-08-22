@@ -112,15 +112,15 @@ const Home = () => {
         <div className="flex items-start justify-start max-md:justify-center h-[50vh] w-[100vw] ">
           <div className="w-[50vw] max-md:w-[80vw] flex items-end justify-start max-md:justify-center pl-[15vw] max-md:pl-0">
             <div className="flex-col flex items-start justify-center max-md:items-center  w-[30vw] max-md:w-[80vw]">
-              <p className="h-[90px] max-md:h-[150px] text-xl max-md:text-[30px] max-sm:text-[25px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
+              <p className="h-[90px] max-md:h-[150px] xl:py-0 text-xl max-md:text-[30px] max-sm:text-[25px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
                 {homeData[currentIndex].description}
               </p>
-              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[15px] max-md:pl-4 max-sm:pl-0">
+              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[14px] max-md:pl-4 max-sm:pl-0">
                 {homeData[currentIndex].tags}
-                <span className="pt-5">
+                <span className="pt-8">
                   <button
                     type="button"
-                    className="px-6 py-2 bg-Yellow text-black rounded-3xl flex items-center justify-center"
+                    className="px-6 py-2 bg-Yellow text-black rounded-3xl flex items-center justify-center "
                   >
                     Book Now
                     <span className="mx-2 bg-white rounded-full">
