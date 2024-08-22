@@ -62,11 +62,17 @@ import Homeimg10 from "../assets/Home/Homeimg10.webp"
 //aestheticimages
 import img1 from "../assets/Others/aeroplaneicon.png"
 import img2 from "../assets/Others/img2.png"
-import img3 from "../assets/Others/img3.png"
-import img4 from "../assets/Others/img4.png"
-import img5 from "../assets/Others/testimonialaesthaticicon.png"
+import img3 from "../assets/Others/img3.svg"
+import img4 from "../assets/Others/img4.svg"
+import img5 from "../assets/Others/testimonialaesthatic.svg"
 ////aesthetic mobile
-import img10 from "../assets/Others//testimonyimg.png"
+import img6 from "../assets/Others/img6.svg"
+import img7 from "../assets/Others/img7.svg"
+import img8 from "../assets/Others/img8.svg"
+import img9 from "../assets/Others/img9.svg"
+import img10 from "../assets/Others/testimonyimg.svg"
+import img11 from "../assets/Others/img11.svg"
+
 export const allAssets = {
 
   //home
@@ -127,5 +133,5 @@ arrowRight,
 //aesthetic
 img1,img2,img3,img4,img5,
 ////aesthetic mobile
-img10
+img6,img7,img8,img9,img10,img11
 };

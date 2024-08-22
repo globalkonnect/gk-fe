@@ -7,12 +7,28 @@ function About() {
   const { intro, tagline, description } = globalKonnect.aboutUs;
   const img = allAssets.aboutImg;
   const aesimg = allAssets.img1
-  
+  const {img2,img1,img6,img7}=allAssets
   return (
     <div
       id="aboutus"
       className="w-full bg-black font-Alata text-white text-lg flex items-center justify-evenly py-[10rem]"
     >
+        <img
+          src={img1}
+          className="stroke-white absolute right-0 top-[105vh] max-lg:hidden"
+        />
+        <img
+          src={img6}
+          className="stroke-white absolute right-0 top-[105vh] size-40 lg:hidden"
+        />
+        <img
+          src={img2}
+          className="stroke-white absolute left-0 top-[173vh] max-lg:hidden"
+        />
+        <img
+          src={img7}
+          className="stroke-black absolute left-0 size-40 top-[175vh] lg:hidden"
+        />
       {/* Text section */}
       <div className="flex-col py-5 flex items-start justify-evenly max-lg:text-base max-lg:items-center max-lg:text-center max-lg:w-[80vw] lg:w-[35vw] px-5 leading-relaxed"
        data-aos="fade-right"
@@ -20,6 +36,7 @@ function About() {
        data-aos-easing="ease"
        data-aos-duration="1000"
       >
+        
         {/* Title */}
         <p
           className="font-Rammetto text-3xl text-yellow-500 py-5 max-lg:text-center max-lg:w-full"

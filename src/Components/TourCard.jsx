@@ -92,7 +92,7 @@ function TourCard() {
   return (
     <div className="flex items-center justify-evenly w-full overflow-x-hidden">
       <div
-        className="swiper-button-prev flex items-center max-md:size-16 justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+        className="swiper-button-prev flex items-center max-md:size-16 justify-center size-20 cursor-pointer   rounded-full"
         onClick={() => {
           swiperRef.current.slidePrev();
         }}
@@ -145,7 +145,7 @@ function TourCard() {
       </Swiper>
 
       <div
-        className="swiper-button-next max-md:size-16 flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+        className="swiper-button-next max-md:size-16 flex items-center justify-center size-20 cursor-pointer z-10 rounded-full"
         onClick={() => {
           swiperRef.current.slideNext();
         }}

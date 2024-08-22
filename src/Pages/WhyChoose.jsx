@@ -1,7 +1,9 @@
 import React from "react";
 import WhyUsDesktop from "../Components/WhyUsDesktop";
 import WhyUsMobile from "../Components/WhyUsMobile";
+import { allAssets } from "../Utility/baseAssets";
 function WhyChoose() {
+  const {img9} = allAssets
   return (
     <div id="whyus" className="bg-Yellow font-Alata w-full pt-10 flex-col">
       {/* title */}
@@ -18,6 +20,10 @@ function WhyChoose() {
       <WhyUsDesktop />
       {/* for screen < xl */}
       <WhyUsMobile />
+      <img
+          src={img9}
+          className="stroke-white absolute right-0 top-[265vh] size-40 lg:hidden"
+        />
     </div>
   );
 }
