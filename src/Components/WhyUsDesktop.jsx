@@ -22,7 +22,6 @@ function WhyUsDesktop() {
                 (index + 1) % 2 ? "-ml-[39rem]" : "-ml-[1.8rem] "
               }        
             `}
-            
             >
               <p
                 className={`bg-white size-[3rem] 

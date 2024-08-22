@@ -18,8 +18,6 @@ function WhyUsMobile() {
               className={`flex -ml-[28px] ${
                 index == 0 ? "mt-[80px]" : "mt-[60px]"
               } `}
-            
-           
             >
               <p className="bg-white size-[3rem] flex items-center justify-center rounded-full font-Rammetto text-2xl  text-Yellow">
                 {/* bullet index number */}
@@ -28,7 +26,9 @@ function WhyUsMobile() {
               {/* text value */}
               <p className="text-start sm:w-[80vw] max-md:w-[60vw] max-sm:w-[60vw] ml-[20px] ">
                 <span className="text-2xl ">{value.title}</span> <br />
-                <span className="leading-relaxed max-sm:text-sm">{value.point}</span>
+                <span className="leading-relaxed max-sm:text-sm">
+                  {value.point}
+                </span>
               </p>
             </p>
           );

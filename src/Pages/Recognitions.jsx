@@ -11,9 +11,13 @@ function Recognitions() {
   const cards = [dubai, ministryOfTourism, awesomeAssam];
 
   return (
-    <div id="recognitions" className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[2rem]  text-3xl">
+    <div
+      id="recognitions"
+      className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[2rem]  text-3xl"
+    >
       {/* Title */}
-      <p className=" py-5 mx-20 backdrop-blur-sm" 
+      <p
+        className=" py-5 mx-20 backdrop-blur-sm"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
