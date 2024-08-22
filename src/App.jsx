@@ -36,16 +36,16 @@ function App() {
           path="/"
           element={
             <div>
-              <Home />
-              <About />
-              <Tours />
-              <WhyUs />
-              <Service />
-              <Clients />
-              <VisaServices />
-              <Recognitions />
-              <Testimonials />
-              <ContactUs />
+              <Home/>
+              <About/>
+              <Tours/>
+              <WhyUs/>
+              <Service/>
+              <Clients/>
+              <VisaServices/>
+              <Recognitions/>
+              <Testimonials/>
+              <ContactUs/>
             </div>
           }
         ></Route>
