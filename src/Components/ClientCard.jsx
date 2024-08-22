@@ -2,7 +2,7 @@ import React from "react";
 
 function ClientCard({ bgImg, height, width }) {
   return (
-    <div className="bg-white h-[10rem] w-[12rem] lg:h-[12rem] max-sm:h-[7rem] max-sm:w-[10rem] lg:w-[13rem] m-5 rounded-3xl flex items-center justify-center shadow-2xl">
+    <div className="bg-white h-[10rem] w-[12rem] lg:h-[12rem] max-sm:h-[8rem] max-sm:w-[11rem] lg:w-[13rem] m-5 rounded-3xl flex items-center justify-center shadow-2xl">
       {/* Displaying the background image */}
       <img
         src={bgImg}

@@ -11,9 +11,9 @@ function Recognitions() {
   const cards = [dubai, ministryOfTourism, awesomeAssam];
 
   return (
-    <div id="recognitions" className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[8rem] text-3xl">
+    <div id="recognitions" className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[2rem]  text-3xl">
       {/* Title */}
-      <p className="py-[8rem] mx-20 backdrop-blur-sm" 
+      <p className=" max-sm:py-5 mx-20 backdrop-blur-sm" 
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -24,7 +24,7 @@ function Recognitions() {
       </p>
 
       {/* Recognition cards with optional vertical line for small screens */}
-      <div className="flex w-[80vw] items-center justify-evenly py-10 max-lg:shadow-2xl max-lg:bg-white max-lg:p-2 max-lg:rounded-2xl">
+      <div className="flex w-[80vw] items-center justify-evenly py-10  max-lg:shadow-2xl max-lg:bg-white max-lg:p-2 max-lg:rounded-2xl">
         {cards.map((value, index) => (
           <span key={index} className="flex items-center justify-center">
             {/* Recognition Card */}
