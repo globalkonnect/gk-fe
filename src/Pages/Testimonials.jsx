@@ -4,7 +4,7 @@ import { allAssets } from "../Utility/baseAssets";
 function Testimonials() {
   // Destructuring the background image for the Testimonials section from allAssets
   const { bgTestimonial, Line } = allAssets;
-
+const {img10}=allAssets
   return (
     <div
       id="testimonials"
@@ -22,8 +22,9 @@ function Testimonials() {
 
       <div className="relative z-10 text-center">
         {/* Title */}
+        {/* <img src={img10} className="h-36 w-36 stroke-white absolute right-0"/> */}
         <p
-          className="py-5 m-10 text-white backdrop-blur-sm text-start max-sm:text-center max-sm:w-full max-sm:m-0"
+          className="py-5 m-10 text-white text-start max-sm:text-center max-sm:w-full max-sm:m-0"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
@@ -31,8 +32,9 @@ function Testimonials() {
         >
           <span className=" max-md:hidden">-</span>Testimonials
           <span className=" max-md:hidden">-</span>
+        
         </p>
-
+    
         {/* Testimonial card section */}
         <div className="flex items-center justify-start w-full">
           <img

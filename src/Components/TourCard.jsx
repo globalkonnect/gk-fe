@@ -117,8 +117,9 @@ function TourCard() {
         breakpoints={{
           0: { slidesPerView: 1 },
           600:{slidesPerView:1},
-          669:{slidesPerView:1},
-          700: { slidesPerView: 1 },
+          640:{slidesPerView:0.8},
+          670:{slidesPerView:0.9},
+          720: { slidesPerView: 1 },
           768: { slidesPerView: 1.5 },
           880: { slidesPerView: 1.7 },
           1024: { slidesPerView: 2 },

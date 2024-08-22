@@ -20,7 +20,7 @@ function Header() {
   return (
     <div className="fixed top-0 md:left-[15vw] max-md:left-0 z-20 bg-offBlack bg-opacity-80 flex items-center justify-between md:w-[70vw] max-md:w-full font-Alata py-3 rounded-b-3xl shadow-lg cursor-pointer">
       <div className="ml-10 flex items-center justify-center">
-        <img src={GK} alt="Logo" />
+        <img src={GK} alt="Logo" onClick={()=>{navigate("/#home")}} title="Global Konnect"/>
       </div>
 
       <button

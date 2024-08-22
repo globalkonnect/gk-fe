@@ -42,7 +42,7 @@ function VisaServiceCard() {
             480: { slidesPerView: 1 }, // Full-width on small screens
             550: { slidesPerView: 1 }, // Full-width on small screens
             600: { slidesPerView: 1 }, // Full-width on small screens
-            650: { slidesPerView: 1.5 }, // Full-width on small screens
+            640: { slidesPerView: 1.5 }, // Full-width on small screens
             680: { slidesPerView: 1.6 }, // Slightly zoomed out on small tablets
             720: { slidesPerView: 1.7 }, // Slightly zoomed out on small tablets
             770: { slidesPerView: 1.4 }, // Slightly zoomed out on small tablets

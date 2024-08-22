@@ -65,6 +65,8 @@ import img2 from "../assets/Others/img2.png"
 import img3 from "../assets/Others/img3.png"
 import img4 from "../assets/Others/img4.png"
 import img5 from "../assets/Others/testimonialaesthaticicon.png"
+////aesthetic mobile
+import img10 from "../assets/Others//testimonyimg.png"
 export const allAssets = {
 
   //home
@@ -123,5 +125,7 @@ GK,
 arrowLeft,
 arrowRight,
 //aesthetic
-img1,img2,img3,img4,img5
+img1,img2,img3,img4,img5,
+////aesthetic mobile
+img10
 };

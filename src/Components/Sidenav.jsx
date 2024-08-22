@@ -68,7 +68,7 @@ const Tools = ({ onClick }) => {
                       onClick={() => {
                         pathLink(value.path);
                       }}
-                      className="block  py-2 text-Yellow text-sm hover:bg-gray-100 cursor-pointer border-b-2 border-gray-700"
+                      className="block  py-2 text-Yellow text-sm hover:bg-Yellow hover:text-black cursor-pointer border-b-2 border-gray-700"
                     >
                       {value.item}
                     </div>
