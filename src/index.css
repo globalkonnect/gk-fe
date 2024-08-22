@@ -73,7 +73,6 @@
 /* Overlay text styling */
 /* Overlay text styling with shadow and highlight */
 .tour-card-overlay .overlay-text {
-  font-size: 40px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8),
     /* Slight shadow for better readability */ 0 0 15px rgba(255, 255, 255, 0.6); /* Glow effect */
   text-align: center;
@@ -105,7 +104,7 @@
 
 /* Enable hover effect and full overlay expansion for the center (active) slide */
 .swiper-slide-active .tour-card-wrapper:hover .tour-card-overlay {
-  height: 100%; /* Expand overlay to full height on hover */
+  height: 50%; /* Expand overlay to full height on hover */
 }
 
 .swiper-slide-active .tour-card-wrapper:hover .overlay-text {
@@ -116,7 +115,7 @@
 .swiper-slide:not(.swiper-slide-active)
   .tour-card-wrapper:hover
   .tour-card-overlay {
-  height: 20%; /* Keep overlay at the bottom for side slides */
+  height: 0%; /* Keep overlay at the bottom for side slides */
 }
 
 .swiper-slide:not(.swiper-slide-active) .tour-card-overlay .overlay-text {
@@ -129,8 +128,57 @@
   border-radius: 1.5rem; /* Maintain border-radius on smaller slides */
 }
 
-/* Ensure no additional left or right margin is causing misalignment */
-.swiper-slide {
-  margin-left: 0;
-  margin-right: 0;
+/* Base styling for the swiper slide */
+.visaservices .swiper-slide {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Styling for the visa card wrapper */
+.visaservices .visa-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem; /* Ensure border-radius is consistent */
+
+}
+
+/* Styling for the visa card image */
+.visaservices .visa-card-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem; /* Ensure image has border-radius */
+  transition: transform 0.5s ease, border-radius 0.5s ease; /* Smooth transition for zoom and border-radius */
+}
+
+/* Overlay styling for the visa card */
+.visaservices .visa-card-wrapper .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and zoom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: inherit; /* Match the border-radius of the card */
+}
+
+/* Active (centered) slide */
+.visaservices .swiper-slide-active .visa-card-wrapper img {
+  transform: scale(1.2); /* Zoom the image */
+}
+
+.visaservices .swiper-slide-active .visa-card-wrapper .overlay {
+  opacity: 0.6; /* Show overlay on active slide */
+  transform: scale(1.2); /* Zoom the overlay to match the image */
+}
+
+/* Non-active slides */
+.visaservices .swiper-slide:not(.swiper-slide-active) .visa-card-wrapper img {
+  transform: scale(1); /* Reset scale for non-active slides */
+}
+
+.visaservices .swiper-slide:not(.swiper-slide-active) .visa-card-wrapper .overlay {
+  opacity: 0; /* Hide overlay on non-active slides */
 }

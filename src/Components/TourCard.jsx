@@ -92,7 +92,7 @@ function TourCard() {
   return (
     <div className="flex items-center justify-evenly w-full overflow-x-hidden">
       <div
-        className="swiper-button-prev flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+        className="swiper-button-prev flex items-center max-md:size-16 justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
         onClick={() => {
           swiperRef.current.slidePrev();
         }}
@@ -105,7 +105,7 @@ function TourCard() {
       </div>
 
       <Swiper
-        className="swiper-container w-[100vw] md:w-[78vw] max-md:w-[66vw] max-sm:w-[60vw] sm:w-[60vw]"
+        className="swiper-container  md:w-[78vw] max-md:w-[66vw] max-sm:w-[60vw] sm:w-[60vw]"
         modules={[Autoplay]}
         loop={true}
         slidesOffsetBefore={isMobile ? 0 : 50}
@@ -116,7 +116,9 @@ function TourCard() {
         }}
         breakpoints={{
           0: { slidesPerView: 1 },
-          640: { slidesPerView: 1 },
+          600:{slidesPerView:1},
+          669:{slidesPerView:1},
+          700: { slidesPerView: 1 },
           768: { slidesPerView: 1.5 },
           880: { slidesPerView: 1.7 },
           1024: { slidesPerView: 2 },
@@ -134,7 +136,7 @@ function TourCard() {
                 alt={`Card ${index}`}
               />
               <div className="tour-card-overlay">
-                <div className="overlay-text">{value.name}</div>
+                <div className="overlay-text max-md:text-xl">{value.name}</div>
               </div>
             </div>
           </SwiperSlide>
@@ -142,7 +144,7 @@ function TourCard() {
       </Swiper>
 
       <div
-        className="swiper-button-next flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+        className="swiper-button-next max-md:size-16 flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
         onClick={() => {
           swiperRef.current.slideNext();
         }}
@@ -150,7 +152,7 @@ function TourCard() {
         <img
           src={arrowRight}
           alt="next"
-          className="h-12 max-md:h-10 max-sm:h-8"
+          className="h-12 max-md:h-10 max-sm:h-8 "
         />
       </div>
     </div>

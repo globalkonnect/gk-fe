@@ -28,7 +28,7 @@ function WhyUsMobile() {
               {/* text value */}
               <p className="text-start sm:w-[80vw] max-md:w-[60vw] max-sm:w-[60vw] ml-[20px] ">
                 <span className="text-2xl ">{value.title}</span> <br />
-                <span className="leading-relaxed">{value.point}</span>
+                <span className="leading-relaxed max-sm:text-sm">{value.point}</span>
               </p>
             </p>
           );
