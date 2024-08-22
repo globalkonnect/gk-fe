@@ -13,13 +13,13 @@ function VisaServices() {
     >
       {/* Title */}
       <p
-        className="py-10"
+        className="py-10 text-3xl"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <span className="max-md:hidden">-</span>Visa Services
+        <span className="max-md:hidden ">-</span>Visa Services
         <span className="max-md:hidden">-</span>
       </p>
 
