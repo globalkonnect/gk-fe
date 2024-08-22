@@ -6,7 +6,8 @@ function About() {
   // Destructuring the necessary data from globalKonnect and allAssets
   const { intro, tagline, description } = globalKonnect.aboutUs;
   const img = allAssets.aboutImg;
-
+  const aesimg = allAssets.img1
+  
   return (
     <div
       id="aboutus"
@@ -37,10 +38,14 @@ function About() {
         <p>{description}</p>
       </div>
       {/* Image section */}
+      <div className="flex">
       <img src={img} alt="About Us" className="max-lg:hidden h-[470px]"  data-aos="fade-left"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"/>
+            {/* <img src={aesimg} className="size-40 absolute  lg:size-40 left-[85vw] xl:size-40 max-xl:hidden" /> */}
+      </div>
+      
     </div>
   );
 }

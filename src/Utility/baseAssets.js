@@ -59,6 +59,12 @@ import Homeimg7 from "../assets/Home/Homeimg7.webp"
 import Homeimg8 from "../assets/Home/Homeimg8.webp"
 import Homeimg9 from "../assets/Home/Homeimg9.webp"
 import Homeimg10 from "../assets/Home/Homeimg10.webp"
+//aestheticimages
+import img1 from "../assets/Others/aeroplaneicon.png"
+import img2 from "../assets/Others/img2.png"
+import img3 from "../assets/Others/img3.png"
+import img4 from "../assets/Others/img4.png"
+import img5 from "../assets/Others/testimonialaesthaticicon.png"
 export const allAssets = {
 
   //home
@@ -115,5 +121,7 @@ bgTestimonial,
 GK,
 //others
 arrowLeft,
-arrowRight
+arrowRight,
+//aesthetic
+img1,img2,img3,img4,img5
 };

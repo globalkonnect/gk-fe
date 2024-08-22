@@ -46,7 +46,7 @@ function App() {
               <Recognitions />
               <Testimonials />
               <ContactUs />
-            </div>
+            </div>   
           }
         ></Route>
       </Routes>

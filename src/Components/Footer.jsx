@@ -1,9 +1,9 @@
 import React from "react";
-import { allAssets } from "../Utility/baseAssets";
 import { BiLogoFacebook } from "react-icons/bi";
-import { GrInstagram } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
+import { GrInstagram } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
+import { allAssets } from "../Utility/baseAssets";
 
 function Footer() {
   const line = allAssets.Line;
@@ -55,7 +55,7 @@ function Footer() {
           {footerIcons.map((Icon, index) => (
             <div
               key={index}
-              className="flex items-center justify-center text-3xl p-2 m-2 text-black border-black hover:border-2 hover:border-white bg-yellow-400 rounded-full"
+              className="flex items-center justify-center text-3xl p-2 m-2 text-black border-black border-2 hover:border-white bg-yellow-400 rounded-full"
             >
               {Icon}
             </div>

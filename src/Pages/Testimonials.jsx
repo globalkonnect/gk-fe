@@ -23,7 +23,7 @@ function Testimonials() {
       <div className="relative z-10 text-center">
         {/* Title */}
         <p
-          className="py-5 m-10 text-white backdrop-blur-sm text-start max-sm:text-[28px]"
+          className="py-5 m-10 text-white backdrop-blur-sm text-start max-sm:text-center max-sm:w-full max-sm:m-0"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
