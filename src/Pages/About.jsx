@@ -23,7 +23,7 @@ function About() {
         />
         <img
           src={img2}
-          className="stroke-white absolute left-0 lg:top-[109rem] xl:top-[100rem] max-lg:hidden"
+          className="stroke-white absolute left-0 lg:top-[109rem] xl:top-[105rem] max-lg:hidden"
         />
         <img
           src={img7}
