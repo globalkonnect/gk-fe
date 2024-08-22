@@ -11,7 +11,7 @@ import { allAssets } from "../Utility/baseAssets";
 import { globalKonnect } from "../Utility/data";
 const Home = () => {
   const swiperRef = useRef();
-  const autoPlayDelayDuration = 2000;
+  const autoPlayDelayDuration = 3000;
   const [currentIndex, setCurrentIndex] = useState(0);
   const isTablet = useMediaQuery({ query: "(max-width:768px)" });
   const [direction, setDirection] = useState("up");
@@ -55,7 +55,7 @@ const Home = () => {
       slides.forEach((slide, index) => {
         if (index === swiperRef.current.activeIndex) {
           slide.style.transform = "scale(1)"; // Zoom the centered slide
-          slide.style.borderRadius = "0"; // Remove border-radius from the centered slide
+          slide.style.borderRadius = ""; // Remove border-radius from the centered slide
           slide.style.transition =
             "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
         } else {
