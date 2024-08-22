@@ -29,12 +29,16 @@ function VisaServiceCard() {
       slides.forEach((slide, index) => {
         if (index === swiperRef.current.activeIndex) {
           slide.querySelector(".overlay").style.opacity = "0.6"; // Show overlay on centered slide
-          slide.style.transform = "scale(1.2)"; // Zoom the centered slide
-          slide.style.transition = "transform 0.5s ease, opacity 0.5s ease, "; // Smooth transition
+          slide.style.transform = "scale(1.1)"; // Zoom the centered slide
+          slide.style.borderRadius = "0"; // Remove border-radius from the centered slide
+          slide.style.transition =
+            "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
         } else {
           slide.querySelector(".overlay").style.opacity = "0"; // Hide overlay on other slides
-          slide.style.transform = "scale(1)"; // Reset scale on other slides
-          slide.style.transition = "transform 0.5s ease, opacity 0.5s ease, "; // Smooth transition
+          slide.style.transform = "scale(0.85)"; // Reset scale on other slides
+          slide.style.borderRadius = "1.5rem"; // Restore border-radius on other slides
+          slide.style.transition =
+            "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
         }
       });
     };
@@ -78,22 +82,24 @@ function VisaServiceCard() {
             1350: { slidesPerView: 2.5 }, // 3 slides visible on larger screens
           }}
         >
-          {visaImages.map((value, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative m-5 h-[26rem] w-[26rem] max-sm:w-[57vw] max-md:h-[40vh] max-md:w-[20rem] rounded-3xl overflow-hidden">
-                <img
-                  src={value.image}
-                  className="h-full w-full object-cover rounded-3xl"
-                  alt={`slide-${index}`}
-                />
-                <div className="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-500">
-                  <p className="text-white text-2xl flex justify-center items-center h-full">
-                    {value.name}
-                  </p>
+          {visaImages.map((value, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="relative m-5 h-[26rem] w-[26rem] max-sm:w-[57vw] max-md:h-[40vh] max-md:w-[20rem] rounded-3xl overflow-hidden">
+                  <img
+                    src={value.image}
+                    className="h-full w-full object-cover rounded-3xl"
+                    alt={`slide-${index}`}
+                  />
+                  <div className="overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-500">
+                    <p className="text-white text-2xl flex justify-center items-center h-full">
+                      {value.name}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

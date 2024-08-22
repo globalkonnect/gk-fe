@@ -45,16 +45,37 @@ const Home = () => {
     }
   };
 
-  const previous = () => {
-    swiperRef.current.slidePrev();
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       next();
     }, autoPlayDelayDuration);
 
-    return () => clearInterval(interval);
+    const handleSlideChange = () => {
+      const slides = swiperRef.current.slides;
+      slides.forEach((slide, index) => {
+        if (index === swiperRef.current.activeIndex) {
+          slide.style.transform = "scale(1)"; // Zoom the centered slide
+          slide.style.borderRadius = "0"; // Remove border-radius from the centered slide
+          slide.style.transition =
+            "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
+        } else {
+          slide.style.transform = "scale(0.8)"; // Reset scale on other slides
+          slide.style.borderRadius = "1.5rem"; // Restore border-radius on other slides
+          slide.style.transition =
+            "transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease"; // Smooth transition
+        }
+      });
+    };
+    const swiperInstance = swiperRef.current;
+    swiperInstance.on("slideChange", handleSlideChange);
+
+    // Initial setup
+    handleSlideChange();
+
+    return () => {
+      swiperInstance.off("slideChange", handleSlideChange);
+      clearInterval(interval);
+    };
   });
 
   return (
@@ -71,6 +92,7 @@ const Home = () => {
       <div className="absolute h-screen flex flex-col items-center justify-start max-md:justify-center max-md:items-center pt-[25vh]">
         <div className="w-[70vw] max-md:w-[90vw] h-[150px] pb-48 max-md:pb-0">
           <TextTransition
+            delay={100}
             className="text-[7.5vh] max-md:text-[60px] max-sm:text-[45px] text-white font-Rammetto text-start max-md:text-center w-[70vw]"
             springConfig={presets.gentle}
             direction={direction}
@@ -93,7 +115,7 @@ const Home = () => {
               <p className="h-[90px] max-md:h-[150px] text-xl max-md:text-[30px] max-sm:text-[25px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
                 {homeData[currentIndex].description}
               </p>
-              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[15px] max-md:pl-10 max-sm:pl-0">
+              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[15px] max-md:pl-4 max-sm:pl-0">
                 {homeData[currentIndex].tags}
                 <span className="pt-5">
                   <button
@@ -110,51 +132,51 @@ const Home = () => {
             </div>
           </div>
 
-          {!isTablet ? (
-            <Swiper
-              className="w-[50vw] h-[50vh] "
-              modules={[Navigation, Pagination]}
-              loop={true}
-              centeredSlides={false}
-              pagination={{ clickable: true }}
-              spaceBetween={50}
-              allowTouchMove={false}
-              onSwiper={(swiper) => {
-                swiperRef.current = swiper;
-              }}
-              onSlideChange={(swiper) => {
-                const newDirection =
-                  swiper.realIndex > currentIndex ? "up" : "down";
-                setDirection(newDirection);
-                setCurrentIndex(swiper.realIndex);
-              }}
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                611: { slidesPerView: 1 },
-                768: { slidesPerView: 1 },
-                1024: { slidesPerView: 1.2 },
-                1280: { slidesPerView: 1.5 },
-                1536: { slidesPerView: 1.8 },
-              }}
-            >
-              {cardImages.map((value, index) => {
-                const isCurrent = swiperRef.current?.realIndex === index;
-                return (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={value}
-                      className="h-[400px] lg:w-[550px] w-[450px] max-lg:w-[400px] object-cover rounded-[32px]"
-                      onClick={() => {
-                        if (!isCurrent) next();
-                      }}
-                    />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          ) : (
-            <></>
-          )}
+          <Swiper
+            className="w-[50vw] h-[50vh]"
+            modules={[Navigation, Pagination]}
+            loop={true}
+            centeredSlides={false}
+            pagination={{ clickable: true }}
+            spaceBetween={50}
+            allowTouchMove={false}
+            speed={1000}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            onSlideChange={(swiper) => {
+              const newDirection =
+                swiper.realIndex > currentIndex ? "up" : "down";
+              setDirection(newDirection);
+              setCurrentIndex(swiper.realIndex);
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              611: { slidesPerView: 1 },
+              768: { slidesPerView: 1 },
+              1024: { slidesPerView: 1.2 },
+              1280: { slidesPerView: 1.5 },
+              1536: { slidesPerView: 1.8 },
+            }}
+            style={{
+              display: isTablet ? "none" : "block",
+            }}
+          >
+            {cardImages.map((value, index) => {
+              const isCurrent = swiperRef.current?.realIndex === index;
+              return (
+                <SwiperSlide key={index}>
+                  <img
+                    src={value}
+                    className="h-[400px] lg:w-[550px] w-[450px] max-lg:w-[400px] object-cover rounded-[32px]"
+                    onClick={() => {
+                      if (!isCurrent) next();
+                    }}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </div>

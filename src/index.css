@@ -112,13 +112,6 @@
   opacity: 1; /* Fully visible text on hover */
 }
 
-/* Disable hover effect and overlay text for side slides */
-.swiper-slide:not(.swiper-slide-active)
-  .tour-card-wrapper:hover
-  .tour-card-overlay {
-  height: 20%; /* Keep overlay at the bottom for side slides */
-}
-
 .swiper-slide:not(.swiper-slide-active) .tour-card-overlay .overlay-text {
   opacity: 0; /* Hide text for side slides */
 }

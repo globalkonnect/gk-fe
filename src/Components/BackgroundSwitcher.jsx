@@ -11,7 +11,7 @@ const BackgroundSwitcher = ({ images, currentIndex, direction }) => {
   return (
     <div className="relative w-full h-full overflow-hidden">
       <div
-        className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-500 ${
+        className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-1000 ${
           direction === "up" ? "slide-out-down" : "slide-out-up"
         }`}
         style={{ backgroundImage: `url(${images[prevIndex]})` }}
@@ -20,7 +20,7 @@ const BackgroundSwitcher = ({ images, currentIndex, direction }) => {
       </div>
 
       <div
-        className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-500 ${
+        className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-1000 ${
           direction === "up" ? "slide-in-up" : "slide-in-down"
         }`}
         style={{ backgroundImage: `url(${images[currentIndex]})` }}

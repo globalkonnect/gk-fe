@@ -1,4 +1,3 @@
-import React from "react";
 import TestimonialCard from "../Components/TestimonialCard";
 import { allAssets } from "../Utility/baseAssets";
 
@@ -23,7 +22,8 @@ function Testimonials() {
 
       <div className="relative z-10 text-center">
         {/* Title */}
-        <p className="py-5 m-10 text-white backdrop-blur-sm text-start max-sm:text-[28px]"
+        <p
+          className="py-5 m-10 text-white backdrop-blur-sm text-start max-sm:text-[28px]"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
@@ -35,7 +35,10 @@ function Testimonials() {
 
         {/* Testimonial card section */}
         <div className="flex items-center justify-start w-full">
-          <img src={Line} className="bg-white md:w-[40vw] xl:w-[50vw] max-md:hidden " />
+          <img
+            src={Line}
+            className="bg-white md:w-[40vw] xl:w-[50vw] max-md:hidden "
+          />
           <TestimonialCard />
         </div>
       </div>
