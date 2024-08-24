@@ -11,7 +11,7 @@ function Tours() {
       {/* Title */}
       <img
         src={img3}
-        className="stroke-black absolute right-0  top-[150rem] max-lg:hidden"
+        className="stroke-black absolute right-0 xl:top-[255vh] lg:top-[270vh]  max-lg:hidden"
       />
       <p
         data-aos="fade-up"
@@ -29,7 +29,7 @@ function Tours() {
       </div>
       <img
         src={img8}
-        className="stroke-white absolute right-0 top-[240vh] size-40 lg:hidden"
+        className="stroke-white absolute right-0 top-[245vh] max-sm:top-[258vh] size-40 lg:hidden"
       />
     </div>
   );

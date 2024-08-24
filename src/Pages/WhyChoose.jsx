@@ -22,7 +22,7 @@ function WhyChoose() {
       <WhyUsMobile />
       <img
           src={img9}
-          className="stroke-white absolute right-0 top-[265vh] size-40 lg:hidden"
+          className="stroke-white absolute right-0 top-[275vh] max-sm:top-[280vh] size-40 lg:hidden"
         />
     </div>
   );

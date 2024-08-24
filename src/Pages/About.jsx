@@ -6,7 +6,6 @@ function About() {
   // Destructuring the necessary data from globalKonnect and allAssets
   const { intro, tagline, description } = globalKonnect.aboutUs;
   const img = allAssets.aboutImg;
-  const aesimg = allAssets.img1;
   const { img2, img1, img6, img7 } = allAssets;
   return (
     <div
@@ -23,11 +22,11 @@ function About() {
       />
       <img
         src={img2}
-        className="stroke-white absolute left-0 lg:top-[109rem] xl:top-[105rem] max-lg:hidden"
+        className="stroke-white absolute left-0 lg:top-[185vh] xl:top-[175vh] max-lg:hidden"
       />
       <img
         src={img7}
-        className="stroke-black absolute left-0 size-40 top-[175vh] lg:hidden"
+        className="stroke-black absolute left-0 size-40 sm:top-[185vh] max-sm:top-[200vh] lg:hidden"
       />
       {/* Text section */}
       <div
