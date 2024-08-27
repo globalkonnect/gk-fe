@@ -31,7 +31,7 @@ function VisaServices() {
         </p>
         <img
           src={img4}
-          className="stroke-black absolute left-2 xl:top-[340rem]  top-[320vh]   max-lg:hidden"
+          className="stroke-black absolute left-2 xl:top-[330rem]  lg:top-[310rem]   max-lg:hidden"
         />
 
         {/* VisaServiceCard component */}
