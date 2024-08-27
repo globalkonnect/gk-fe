@@ -16,7 +16,7 @@ const BackgroundSwitcher = ({ images, currentIndex, direction }) => {
         }`}
         style={{ backgroundImage: `url(${images[prevIndex]})` }}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 max-md:opacity-35 " />
       </div>
 
       <div
@@ -25,7 +25,7 @@ const BackgroundSwitcher = ({ images, currentIndex, direction }) => {
         }`}
         style={{ backgroundImage: `url(${images[currentIndex]})` }}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 max-md:opacity-35 " />
       </div>
     </div>
   );

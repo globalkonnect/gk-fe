@@ -9,7 +9,7 @@ function ContactUs() {
   return (
     <div
       id="contactus"
-      className="w-full h-[25rem] text-black flex-col flex  items-center justify-center bg-Yellow"
+      className="w-full h-[25rem] text-black flex-col flex  items-center justify-center bg-Yellow "
     >
       {/* Title section */}
       <p

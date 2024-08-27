@@ -8,7 +8,7 @@ function Service() {
   return (
     <div
       id="services"
-      className="relative font-Rammetto flex-col flex items-center justify-center text-center text-Yellow py-[10rem] text-3xl bg-cover bg-center"
+      className="relative font-Rammetto flex-col flex items-center justify-center text-center text-Yellow py-[10rem] text-3xl bg-cover bg-center overflow-x-hidden"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",

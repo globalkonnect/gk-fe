@@ -10,7 +10,7 @@ function Clients() {
   return (
     <div
       id="clients"
-      className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite pt-[9rem] max-sm"
+      className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite pt-[9rem] max-sm overflow-x-hidden"
     >
       {/* Clients title */}
       <p

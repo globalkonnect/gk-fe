@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import "swiper/css"; // Core Swiper CSS
 import "swiper/css/autoplay"; // Autoplay module CSS (if required)
 import { Autoplay } from "swiper/modules"; // Correct module path
@@ -10,6 +11,7 @@ function TestimonialCard() {
   const swiperRef = useRef();
   const arrowLeft = allAssets.arrowLeft;
   const arrowRight = allAssets.arrowRight;
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <div className="overflow-x-hidden">
       <div className="py-5">
@@ -45,6 +47,7 @@ function TestimonialCard() {
             loop={true}
             autoplay={{ delay: 5 }}
             speed={3000}
+            slidesOffsetBefore={isMobile ? 50 : 50}
             centeredSlides={true}
             centeredSlidesBounds={true}
             onSwiper={(swiper) => {
@@ -52,6 +55,9 @@ function TestimonialCard() {
             }}
             breakpoints={{
               0: { slidesPerView: 1 },
+              310:{slidesPerView:0.75},
+              350:{slidesPerView:0.8},
+              370:{slidesPerView:1},
               440: { slidesPerView: 1.4 },
               455: { slidesPerView: 1.5 },
             }}

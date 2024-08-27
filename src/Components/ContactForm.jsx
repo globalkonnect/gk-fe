@@ -83,7 +83,7 @@ function ContactForm() {
             {/* parent to username and email */}
             {/* username input */}
             <input
-              className="shadow appearance-none border bg-offgray rounded-lg w-[19vw] max-md:mb-5 md:mr-4 max-md:w-[60vw] py-3 px-3 border-gray-600  text-gray-700 leading-tight focus:outline-double  focus:border-blue-600"
+              className="shadow appearance-none border bg-offgray rounded-lg w-[19vw] max-md:mb-5 md:mr-4 max-md:w-[60vw] py-3 px-3 border-gray-600  text-gray-700 leading-tight focus:border-Yellow"
               id="username"
               type="text"
               placeholder="Username"

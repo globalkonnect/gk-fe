@@ -35,7 +35,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div>
+            <div >
               <Home/>
               <About/>
               <Tours/>

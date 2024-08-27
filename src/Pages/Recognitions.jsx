@@ -13,7 +13,7 @@ function Recognitions() {
   return (
     <div
       id="recognitions"
-      className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[2rem]  text-3xl"
+      className="bg-Yellow font-Rammetto flex-col flex items-center justify-center py-[2rem]  text-3xl overflow-x-hidden"
     >
       {/* Title */}
       <p

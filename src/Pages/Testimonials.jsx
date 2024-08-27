@@ -9,7 +9,7 @@ function Testimonials() {
   return (
     <div
       id="testimonials"
-      className="relative pb-10 pt-[10rem] flex flex-col items-start justify-center font-Rammetto text-3xl bg-cover bg-center"
+      className="relative pb-10 pt-[10rem] flex flex-col items-start justify-center font-Rammetto text-3xl bg-cover bg-center overflow-x-hidden"
       style={{
         backgroundImage: `url(${bgTestimonial})`,
         backgroundSize: "cover",

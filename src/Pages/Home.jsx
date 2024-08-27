@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import BackgroundSwitcher from "../Components/BackgroundSwitcher";
 import { allAssets } from "../Utility/baseAssets";
 import { globalKonnect } from "../Utility/data";
+
 const Home = () => {
   const swiperRef = useRef();
   const autoPlayDelayDuration = 3000;
@@ -81,7 +82,8 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center"
+      className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center overflow-x-hidden"
+     
     >
       <BackgroundSwitcher
         images={bgImages}
@@ -112,7 +114,7 @@ const Home = () => {
         <div className="flex items-start justify-start max-md:justify-center h-[50vh] w-[100vw] ">
           <div className="w-[50vw] max-md:w-[80vw] flex items-end justify-start max-md:justify-center pl-[15vw] max-md:pl-0">
             <div className="flex-col flex items-start justify-center max-md:items-center  w-[30vw] max-md:w-[80vw]">
-              <p className="h-[90px] max-md:h-[150px] xl:py-0 text-xl max-md:text-[30px] max-sm:text-[25px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
+              <p className="h-[90px] max-md:h-auto xl:py-0 drop-shadow-xl text-xl max-md:text-[30px] max-sm:text-[22px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
                 {homeData[currentIndex].description}
               </p>
               <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[14px] max-md:pl-4 max-sm:pl-0">
@@ -140,7 +142,7 @@ const Home = () => {
             pagination={{ clickable: true }}
             spaceBetween={50}
             allowTouchMove={false}
-            speed={1000}
+            speed={3000}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
