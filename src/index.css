@@ -195,3 +195,19 @@
   .overlay {
   opacity: 0; /* Hide overlay on non-active slides */
 }
+
+
+@keyframes box {
+  from {
+   
+    transform: translate(10%, -10%);
+  }
+  to {
+   
+    transform: translate(0, 0);
+  }
+}
+
+.appear-from-right-top {
+  animation: box 0.3s ease-in-out forwards;
+}
