@@ -5,6 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide all scrollbars in WebKit browsers (Chrome, Safari, etc.) */
+*::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in webkit browsers */
+}
+
+/* Optional: Set universal scrollbar settings */
+* {
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer and Edge */
+}
+
 @keyframes slide-in-right {
   0% {
     transform: translateX(100%);
