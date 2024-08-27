@@ -28,7 +28,7 @@ function Header() {
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
         type="button"
-        className="lg:hidden text-Yellow mr-10 z-30"
+        className="lg:hidden text-Yellow mr-10 z-30 "
       >
         <Tools />
       </button>

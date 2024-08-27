@@ -87,11 +87,11 @@ export const globalKonnect = {
       "Comprehensive forex services to provide you with the best exchange rates and financial support for your international travels.",
   },
   testimonials: [
-    "Global Konnect made our family vacation to Bali unforgettable! The personalized itinerary and seamless arrangements allowed us to focus on enjoying the beautiful beaches and vibrant culture. Highly recommended!",
-    "I had a fantastic experience with Global Konnect. Their attention to detail and exceptional customer service turned our trip to Europe into a dream come true. Every aspect of the trip was perfectly planned and executed.",
-    "Travelling with Global Konnect was a breeze. Their team’s expertise and support throughout our trip to Dubai were outstanding. They truly go above and beyond to ensure a memorable travel experience.",
-    "From booking to the actual trip, Global Konnect provided top-notch service. Our honeymoon in the Maldives was everything we hoped for and more, thanks to their thoughtful planning and recommendations.",
-    "Global Konnect's exceptional service and local insights made our trip to Northeast India an adventure of a lifetime. We were impressed by their professionalism and the personalized touch they added to our journey.",
+    {text:"Global Konnect made our family vacation to Bali unforgettable! The personalized itinerary and seamless arrangements allowed us to focus on enjoying the beautiful beaches and vibrant culture. Highly recommended!",people:"Raghav, Ooty"},
+    {text:"I had a fantastic experience with Global Konnect. Their attention to detail and exceptional customer service turned our trip to Europe into a dream come true. Every aspect of the trip was perfectly planned and executed.",people:"Supriti, New Delhi"},
+    {text:"Travelling with Global Konnect was a breeze. Their team’s expertise and support throughout our trip to Dubai were outstanding. They truly go above and beyond to ensure a memorable travel experience.",people:"Ajay, Rajasthan"},
+  {text:"From booking to the actual trip, Global Konnect provided top-notch service. Our honeymoon in the Maldives was everything we hoped for and more, thanks to their thoughtful planning and recommendations.",people:"Gourav, Navi Mumbai"},
+  {text:"Global Konnect's exceptional service and local insights made our trip to Northeast India an adventure of a lifetime. We were impressed by their professionalism and the personalized touch they added to our journey.",people:"Vedah, Kolkata"},
   ],
   footer: {
     links: ["HOME", "ABOUT US", "TOURS", "CLIENTS", "VISA", "CONTACT US"],

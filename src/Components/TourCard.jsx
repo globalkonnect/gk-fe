@@ -91,7 +91,7 @@ function TourCard() {
 
   return (
     <div className="flex items-center justify-evenly w-full overflow-x-hidden">
-      <div
+      {/* <div
         className="swiper-button-prev flex items-center  justify-center  cursor-pointer   rounded-full"
         onClick={() => {
           swiperRef.current.slidePrev();
@@ -102,7 +102,7 @@ function TourCard() {
           alt="prev"
           className="h-12 max-md:h-10 max-sm:h-7"
         />
-      </div>
+      </div> */}
 
       <Swiper
         className="swiper-container  md:w-[78vw] max-md:w-[66vw] max-sm:w-[75vw] sm:w-[60vw]"
@@ -110,7 +110,7 @@ function TourCard() {
         autoplay={{ delay: 8 }}
         loop={true}
         slidesOffsetBefore={isMobile ? 10 : 50}
-        speed={5000}
+        speed={2000}
         centeredSlides={true}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -145,7 +145,7 @@ function TourCard() {
         ))}
       </Swiper>
 
-      <div
+      {/* <div
         className="swiper-button-next flex items-center justify-center  cursor-pointer z-10 rounded-full"
         onClick={() => {
           swiperRef.current.slideNext();
@@ -156,7 +156,7 @@ function TourCard() {
           alt="next"
           className="h-12 max-md:h-10 max-sm:h-8 "
         />
-      </div>
+      </div> */}
     </div>
   );
 }
