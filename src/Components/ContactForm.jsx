@@ -56,7 +56,6 @@ function ContactForm() {
         });
         resetPopup();
       });
-    event.preventDefault();
   };
   function resetPopup() {
     setTimeout(() => {
@@ -84,7 +83,6 @@ function ContactForm() {
             {/* username input */}
             <input
               className="shadow appearance-none border bg-offgray rounded-lg w-[19vw] max-md:mb-5 md:mr-4 max-md:w-[60vw] py-3 px-3 border-gray-600  text-gray-700 leading-tight focus:border-Yellow"
-              id="username"
               type="text"
               placeholder="Username"
               onChange={(e) =>
@@ -97,7 +95,6 @@ function ContactForm() {
             {/* useremail  input*/}
             <input
               className="shadow appearance-none border border-gray-600 bg-offgray rounded-lg md:w-[19vw] max-md:w-[60vw] py-3 px-3 text-gray-700  leading-tight   focus:border-Yellow "
-              id="email"
               type="email"
               onChange={(e) =>
                 setFormState({ ...formState, email: e.target.value })
@@ -111,7 +108,6 @@ function ContactForm() {
           </div>
           {/* usermessage */}
           <textarea
-            id="message"
             onChange={(e) =>
               setFormState({ ...formState, message: e.target.value })
             }
