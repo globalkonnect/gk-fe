@@ -8,6 +8,14 @@ const BackgroundSwitcher = ({ images, currentIndex, direction }) => {
     setPrevIndex(currentIndex);
   }, [currentIndex]);
 
+  // Preload all images
+  useEffect(() => {
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, [images]);
+
   return (
     <div className="relative w-full h-full overflow-hidden">
       <div
