@@ -18,13 +18,24 @@ function Footer() {
     { toolName: "CONTACT US", path: "#contactus" },
   ];
 
-  // Social Media Icons
-  const footerIcons = [<BiLogoFacebook />, <GrInstagram />, <BsWhatsapp />];
+  // Social Media Icons with Links
+  const socialMediaLinks = [
+    {
+      Icon: <BiLogoFacebook />,
+      url: "https://www.facebook.com/people/Global-Konnect/100085624747165/?mibextid=LQQJ4d",
+    },
+    { Icon: <GrInstagram />, url: "https://www.instagram.com/global_konnect_" },
+    { Icon: <BsWhatsapp />, url: "https://wa.me/918822755694" },
+  ];
 
   const navigate = useNavigate();
 
   const pathLink = (path) => {
     navigate(`/${path}`);
+  };
+
+  const handleSocialClick = (url) => {
+    window.open(url, "_blank", "noopener noreferrer");
   };
 
   return (
@@ -52,10 +63,11 @@ function Footer() {
 
         {/* Social Media */}
         <div className="flex items-center justify-center">
-          {footerIcons.map((Icon, index) => (
+          {socialMediaLinks.map(({ Icon, url }, index) => (
             <div
               key={index}
-              className="flex items-center justify-center text-3xl p-2 m-2 text-black border-black border-2 hover:border-white bg-yellow-400 rounded-full"
+              className="flex items-center justify-center text-3xl p-2 m-2 text-black border-black border-2 hover:border-white bg-yellow-400 rounded-full cursor-pointer"
+              onClick={() => handleSocialClick(url)}
             >
               {Icon}
             </div>

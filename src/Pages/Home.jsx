@@ -11,6 +11,18 @@ import { allAssets } from "../Utility/baseAssets";
 import { globalKonnect } from "../Utility/data";
 
 const Home = () => {
+  const handleButtonClick = () => {
+    const isMobileOrTablet =
+      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+        navigator.userAgent
+      );
+
+    if (isMobileOrTablet) {
+      window.location.href = "tel:+918822755694";
+    } else {
+      window.open("mailto:info@globalkonnect.com", "_blank");
+    }
+  };
   const swiperRef = useRef();
   const autoPlayDelayDuration = 3000;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -83,7 +95,6 @@ const Home = () => {
     <div
       id="home"
       className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center overflow-x-hidden"
-     
     >
       <BackgroundSwitcher
         images={bgImages}
@@ -122,7 +133,8 @@ const Home = () => {
                 <span className="pt-8">
                   <button
                     type="button"
-                    className="px-6 py-2 bg-Yellow text-black rounded-3xl flex items-center justify-center "
+                    className="px-6 py-2 bg-Yellow text-black rounded-3xl flex items-center justify-center"
+                    onClick={handleButtonClick}
                   >
                     Book Now
                     <span className="mx-2 bg-white rounded-full">
