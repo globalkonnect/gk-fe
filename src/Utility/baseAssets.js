@@ -1,7 +1,7 @@
 //  Recognition
-import verticalLine from "../assets/Recognition/LineVertical.png";
-import dubai from "../assets/Recognition/Dubai.png";
-import ministryOfTourism from "../assets/Recognition/ministryoftourism.png";
+import verticalLine from "../assets/Recognition/lineVertical.png";
+import dubai from "../assets/Recognition/dubai.png";
+import ministryOfTourism from "../assets/Recognition/ministryofTourism.png";
 import awesomeAssam from "../assets/Recognition/awesomeAssam.png";
 
 //Clients
@@ -61,7 +61,7 @@ import Homeimg9 from "../assets/Home/Homeimg9.webp"
 import Homeimg10 from "../assets/Home/Homeimg10.webp"
 //aestheticimages
 import img1 from "../assets/Others/aeroplaneicon.png"
-import img2 from "../assets/Others/img2.png"
+import img2 from "../assets/Others/img2.svg"
 import img3 from "../assets/Others/img3.svg"
 import img4 from "../assets/Others/img4.svg"
 import img5 from "../assets/Others/testimonialaesthatic.svg"
