@@ -24,7 +24,7 @@ function About() {
         src={img2}
         className="stroke-white absolute left-0 lg:top-[110rem] xl:top-[100rem] max-lg:hidden"
       />
-     
+
       {/* Text section */}
       <div
         className="flex-col py-5 flex items-start justify-evenly max-lg:text-base max-lg:items-center max-lg:text-center max-lg:w-[80vw] lg:w-[35vw] px-5 leading-relaxed"
@@ -55,12 +55,11 @@ function About() {
           src={img}
           alt="About Us"
           className="max-lg:hidden h-[470px]"
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"
         />
-        
       </div>
     </div>
   );

@@ -50,15 +50,10 @@ import Singaporebg from "@/assets/Home/Singaporedesktop.webp"
 import Thailandbg from "@/assets/Home/Thailanddesktop.webp"
 import Balibg from "@/assets/Home/Balidesktop.webp"
 import Homeimg1 from "@/assets/Home/Homeimg1.webp"
-import Homeimg2 from "@/assets/Home/Homeimg2.webp"
-import Homeimg3 from "@/assets/Home/Homeimg3.webp"
-import Homeimg4 from "@/assets/Home/Homeimg4.webp"
-import Homeimg5 from "@/assets/Home/Homeimg5.webp"
-import Homeimg6 from "@/assets/Home/Homeimg6.webp"
-import Homeimg7 from "@/assets/Home/Homeimg7.webp"
-import Homeimg8 from "@/assets/Home/Homeimg8.webp"
-import Homeimg9 from "@/assets/Home/Homeimg9.webp"
-import Homeimg10 from "@/assets/Home/Homeimg10.webp"
+import Homeimg2 from "@/assets/Home/Homeimg3.webp"
+import Homeimg3 from "@/assets/Home/Homeimg5.webp"
+import Homeimg4 from "@/assets/Home/Homeimg7.webp"
+import Homeimg5 from "@/assets/Home/Homeimg9.webp"
 //aestheticimages
 import img1 from "@/assets/Others/aeroplaneicon.png"
 import img2 from "@/assets/Others/img2.svg"
@@ -87,11 +82,6 @@ export const allAssets = {
   Homeimg3,
   Homeimg4,
   Homeimg5,
-  Homeimg6,
-  Homeimg7,
-  Homeimg8,
-  Homeimg9,
-  Homeimg10,
   //Recognitions
   verticalLine,
   dubai,

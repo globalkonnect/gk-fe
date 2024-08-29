@@ -35,22 +35,22 @@ function App() {
         <Route
           path="/"
           element={
-            <div >
-              <Home/>
-              <About/>
-              <Tours/>
-              <WhyUs/>
-              <Service/>
-              <Clients/>
-              <VisaServices/>
-              <Recognitions/>
-              <Testimonials/>
-              <ContactUs/>
+            <div>
+              <Home />
+              <About />
+              <Tours />
+              <WhyUs />
+              <Service />
+              <Clients />
+              <VisaServices />
+              <Recognitions />
+              <Testimonials />
+              <ContactUs />
             </div>
           }
         ></Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -27,6 +27,7 @@ const Home = () => {
   const autoPlayDelayDuration = 3000;
   const [currentIndex, setCurrentIndex] = useState(0);
   const isTablet = useMediaQuery({ query: "(max-width:768px)" });
+  const isWidth768px = useMediaQuery({ query: "(width: 768px)" });
   const [direction, setDirection] = useState("up");
   const homeData = globalKonnect.home;
   const bgImages = [
@@ -39,10 +40,10 @@ const Home = () => {
 
   const cardImages = [
     allAssets.Homeimg1,
+    allAssets.Homeimg2,
     allAssets.Homeimg3,
+    allAssets.Homeimg4,
     allAssets.Homeimg5,
-    allAssets.Homeimg7,
-    allAssets.Homeimg9,
   ];
 
   const next = () => {
@@ -125,12 +126,25 @@ const Home = () => {
         <div className="flex items-start justify-start max-md:justify-center h-[50vh] w-[100vw] ">
           <div className="w-[50vw] max-md:w-[80vw] flex items-end justify-start max-md:justify-center pl-[15vw] max-md:pl-0">
             <div className="flex-col flex items-start justify-center max-md:items-center  w-[30vw] max-md:w-[80vw]">
-              <p className="h-[90px] max-md:h-auto xl:py-0 drop-shadow-xl text-xl max-md:text-[30px] max-sm:text-[22px] max-md:leading-9 w-[30vw] max-md:w-[60vw] max-sm:w-[80vw] text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden">
+              <p
+                className={`h-[90px] max-md:h-auto xl:py-0 drop-shadow-xl text-xl max-md:text-[30px] max-sm:text-[22px] max-md:leading-9 ${
+                  isWidth768px
+                    ? "w-[80vw] mt-5 text-center"
+                    : "w-[30vw] max-md:w-[60vw] max-sm:w-[80vw]"
+                } text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden`}
+              >
                 {homeData[currentIndex].description}
               </p>
-              <p className="my-5 flex items-start justify-start max-md:justify-center max-md:items-center flex-col tracking-[3px] max-md:text-[25px] max-sm:text-[14px] max-md:pl-4 max-sm:pl-0">
+
+              <p
+                className={`my-5 flex items-center justify-center flex-col tracking-[3px] ${
+                  isWidth768px
+                    ? "w-[80vw] -ml-5 "
+                    : "max-md:text-[25px] max-sm:text-[14px] max-md:pl-4 max-sm:pl-0"
+                } text-center`}
+              >
                 {homeData[currentIndex].tags}
-                <span className="pt-8">
+                <span className="pt-8 flex justify-center">
                   <button
                     type="button"
                     className="px-6 py-2 bg-Yellow text-black rounded-3xl flex items-center justify-center"
