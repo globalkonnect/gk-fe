@@ -29,12 +29,17 @@ function ServiceCard() {
     const handleSlideChange = () => {
       if (!swiperRef.current) return;
       const slides = swiperRef.current.slides;
+
+      const isMobileScreen = window.innerWidth < 768; // Check if the screen width is less than 768px
+
       slides.forEach((slide, index) => {
         if (index === swiperRef.current.activeIndex) {
-          slide.style.transform = "scale(1)"; // Zoom the active (centered) slide
+          // Zoom the active (centered) slide
+          slide.style.transform = isMobileScreen ? "scale(1)" : "scale(1.2)";
           slide.style.transition = "transform 0.5s ease"; // Smooth transition
         } else {
-          slide.style.transform = "scale(0.7)"; // Scale down the non-active slides
+          // Scale down the non-active slides
+          slide.style.transform = isMobileScreen ? "scale(0.7)" : "scale(0.9)";
           slide.style.transition = "transform 0.5s ease"; // Smooth transition
         }
       });
@@ -42,7 +47,7 @@ function ServiceCard() {
 
     if (swiperRef.current) {
       swiperRef.current.on("slideChange", handleSlideChange);
-      handleSlideChange();
+      handleSlideChange(); // Initial call to set the styles correctly on load
     }
 
     // Clean up event listener on component unmount
@@ -55,6 +60,7 @@ function ServiceCard() {
 
   return (
     <div className="relative flex items-center justify-center">
+      {/* Optional navigation buttons */}
       {/* <div
         className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full z-10"
         onClick={() => swiperRef.current?.slidePrev()}
@@ -85,7 +91,7 @@ function ServiceCard() {
           {tools.map((value, index) => (
             <SwiperSlide key={index} className="flex justify-center">
               <div className="flex-col flex items-center justify-center text-center text-white text-base max-sm:text-sm">
-                <div className=" m-6 p-2 rounded-full bg-Yellow flex items-center justify-center w-32 h-32   shadow-2xl">
+                <div className="m-6 p-2 rounded-full bg-Yellow flex items-center justify-center w-32 h-32 shadow-2xl">
                   <img
                     src={value.icon}
                     className="size-20 p-2"
@@ -100,8 +106,9 @@ function ServiceCard() {
           ))}
         </Swiper>
       </div>
-      {/* 
-      <div
+
+      {/* Optional navigation buttons */}
+      {/* <div
         className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center size-20 cursor-pointer backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full z-10"
         onClick={() => swiperRef.current?.slideNext()}
       >
