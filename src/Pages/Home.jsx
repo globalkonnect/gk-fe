@@ -94,7 +94,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center overflow-x-hidden"
+      className="relative h-screen font-Alata text-Yellow flex flex-col items-center justify-center "
     >
       <BackgroundSwitcher
         images={bgImages}
@@ -102,7 +102,7 @@ const Home = () => {
         direction={direction}
       />
 
-      <div className="absolute h-screen flex flex-col items-center justify-start max-md:justify-center max-md:items-center pt-[25vh]">
+      <div className="absolute h-screen flex flex-col items-center justify-start max-md:justify-center max-md:items-center pt-[23vh]">
         <div className="w-[70vw] max-md:w-[90vw] h-[150px] pb-48 max-md:pb-0">
           <TextTransition
             delay={100}

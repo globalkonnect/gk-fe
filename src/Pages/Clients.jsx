@@ -10,7 +10,7 @@ function Clients() {
   return (
     <div
       id="clients"
-      className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite pt-[9rem] max-sm overflow-x-hidden"
+      className="w-full flex flex-col items-center justify-center font-Rammetto text-3xl bg-Offwhite pt-[9rem] max-sm:pt-[2rem] overflow-x-hidden"
     >
       {/* Clients title */}
       <p
@@ -25,7 +25,7 @@ function Clients() {
       </p>
 
       {/* Client cards grid */}
-      <div className="py-20 grid max-md:grid-cols-2 md:grid-cols-4 items-center justify-center w-[90vw] max-sm:w-[100vw]">
+      <div className="py-10 max-sm:py-5 grid max-md:grid-cols-2 md:grid-cols-4 items-center justify-center w-[90vw] max-sm:w-[100vw]">
         {/* Rendering client cards */}
         {clientsImg.map((value, index) => (
           <span className="flex items-center justify-center" key={index}>

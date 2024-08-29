@@ -17,7 +17,7 @@ function Recognitions() {
     >
       {/* Title */}
       <p
-        className=" py-5 mx-20 backdrop-blur-sm"
+        className=" mb-5 mx-20 backdrop-blur-sm max-md:text-xl"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -28,7 +28,7 @@ function Recognitions() {
       </p>
 
       {/* Recognition cards with optional vertical line for small screens */}
-      <div className="flex w-[80vw] items-center justify-evenly py-10  max-lg:shadow-2xl max-lg:bg-white max-lg:p-2 max-lg:rounded-2xl">
+      <div className="flex w-[80vw] items-center justify-evenly my-10 max-sm:my-2  max-lg:shadow-2xl max-lg:bg-white max-lg:p-2 max-lg:rounded-2xl">
         {cards.map((value, index) => (
           <span key={index} className="flex items-center justify-center">
             {/* Recognition Card */}

@@ -23,7 +23,7 @@ function Testimonials() {
         {/* Title */}
         <img
           src={img10}
-          className="h-36 w-36 stroke-white absolute right-2 max-sm:bottom-[25rem] sm:bottom-[35rem] md:bottom-[70rem] lg:hidden"
+          className="h-36 w-36 z-10 stroke-white absolute right-2 max-sm:bottom-[25rem] sm:bottom-[35rem] md:bottom-[70rem] lg:hidden"
         />
         <img
           src={img5}

@@ -15,7 +15,7 @@ function VisaServices() {
       />
       <div
         id="visa"
-        className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-[10rem]"
+        className="flex flex-col items-center justify-center text-center font-Rammetto text-3xl max-sm:text-xl py-[10rem] max-sm:pb-[5rem]"
       >
         {/* Title */}
 
@@ -35,7 +35,7 @@ function VisaServices() {
         />
 
         {/* VisaServiceCard component */}
-        <div className="py-20">
+        <div className="py-20 max-sm:py-5">
           <VisaServiceCard />
         </div>
 

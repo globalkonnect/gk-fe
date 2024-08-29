@@ -31,10 +31,10 @@ function ServiceCard() {
       const slides = swiperRef.current.slides;
       slides.forEach((slide, index) => {
         if (index === swiperRef.current.activeIndex) {
-          slide.style.transform = "scale(1.2)"; // Zoom the active (centered) slide
+          slide.style.transform = "scale(1)"; // Zoom the active (centered) slide
           slide.style.transition = "transform 0.5s ease"; // Smooth transition
         } else {
-          slide.style.transform = "scale(0.9)"; // Scale down the non-active slides
+          slide.style.transform = "scale(0.7)"; // Scale down the non-active slides
           slide.style.transition = "transform 0.5s ease"; // Smooth transition
         }
       });
