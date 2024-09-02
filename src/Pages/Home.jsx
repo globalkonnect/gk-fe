@@ -107,7 +107,7 @@ const Home = () => {
         <div className="w-[70vw] max-md:w-[90vw] h-[150px] pb-48 max-md:pb-0">
           <TextTransition
             delay={100}
-            className="text-[7.5vh] max-md:text-[60px] max-sm:text-[45px] text-white font-Rammetto text-start max-md:text-center w-[70vw]"
+            className="text-[7.5vh] max-md:text-[60px] max-sm:text-[40px] text-white font-Rammetto text-start max-md:text-center w-[70vw]"
             springConfig={presets.gentle}
             direction={direction}
             style={{
@@ -127,17 +127,17 @@ const Home = () => {
           <div className="w-[50vw] max-md:w-[80vw] flex items-end justify-start max-md:justify-center pl-[15vw] max-md:pl-0">
             <div className="flex-col flex items-start justify-center max-md:items-center  w-[30vw] max-md:w-[80vw]">
               <p
-                className={`h-[90px] max-md:h-auto xl:py-0 drop-shadow-xl text-xl max-md:text-[30px] max-sm:text-[22px] max-md:leading-9 ${
+                className={`h-[90px] max-md:h-auto xl:py-0 drop-shadow-xl text-xl max-md:text-[30px] max-sm:text-[20px] max-md:leading-9 ${
                   isWidth768px
                     ? "w-[80vw] mt-5 text-center"
                     : "w-[30vw] max-md:w-[60vw] max-sm:w-[80vw]"
-                } text-start max-md:text-center max-md:pb-5 max-sm:pb-2 overflow-hidden`}
+                } text-start max-md:text-center max-md:pb-5 max-sm:pb-2`}
               >
                 {homeData[currentIndex].description}
               </p>
 
               <p
-                className={`my-5 flex items-center justify-center flex-col tracking-[3px] ${
+                className={`my-5 flex items-center justify-center lg:items-start  flex-col tracking-[3px] ${
                   isWidth768px
                     ? "w-[80vw] -ml-5 "
                     : "max-md:text-[25px] max-sm:text-[14px] max-md:pl-4 max-sm:pl-0"
