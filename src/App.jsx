@@ -14,6 +14,7 @@ import Testimonials from "./Pages/Testimonials";
 import Tours from "./Pages/Tours";
 import VisaServices from "./Pages/VisaServices";
 import WhyUs from "./Pages/WhyChoose";
+import Courtesy from "./Components/Courtesy";
 function App() {
   const location = useLocation();
 
@@ -51,6 +52,7 @@ function App() {
         ></Route>
       </Routes>
       <Footer />
+      <Courtesy />
     </>
   );
 }
