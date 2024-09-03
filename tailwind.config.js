@@ -12,6 +12,7 @@ export default {
         Offwhite: "#F2F2F2",
         offBlack: "#131212",
         offgray: "#d9d9d9",
+        Neon:"#dbfe52",
       },
     },
   },
