@@ -2,7 +2,7 @@ import React from "react";
 import { RiExternalLinkLine } from "react-icons/ri";
 function Courtesy() {
   return (
-    <div className="w-full items-center justify-center py-2 flex bg-black text-white ">
+    <div className="w-full items-start justify-center pb-7 -mt-3 flex bg-black text-white ">
       Carefullly crafted by{" "}
       <a
         href="https://embraystechnologies.com/?ref=globalKonnect"
