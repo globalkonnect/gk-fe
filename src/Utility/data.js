@@ -3,26 +3,26 @@ export const globalKonnect = {
     {
       title: "North East India",
       description:
-        "A mesmerizing tapestry of vibrant cultures, breathtaking landscapes, and untamed natural beauty.",
+        "A vibrant tapestry of cultures, breathtaking landscapes, and untamed beauty.",
       tags: "ADVENTURE | EXPLORATION",
     },
-    
+
     {
       title: "Dubai",
       description:
-        "A dazzling cityscape where modern luxury meets traditional charm, offering endless entertainment and innovation.",
+        "Where modern luxury meets tradition, offering innovation, endless entertainment, and a rich cultural heritage.",
       tags: "GETAWAY | WANDERLUST",
     },
     {
       title: "Singapore",
       description:
-        "A dynamic island city-state known for  its pristine skyline, lush gardens, and rich cultural tapestry.",
+        "A vibrant city-state with pristine skylines, lush gardens, and a rich cultural tapestry.",
       tags: "JOURNEYS | EXPLORATIONS",
     },
     {
       title: "Thailand",
       description:
-        "A tropical paradise brimming with golden temples, vibrant street markets, and stunning beaches.",
+        "A tropical paradise with golden temples, vibrant markets, and stunning beaches.",
       tags: "ESCAPADE | ADVENTURE ",
     },
     {
@@ -34,64 +34,79 @@ export const globalKonnect = {
   ],
   aboutUs: {
     intro:
-      "Global Konnect, based in the heart of Guwahati, Assam, is your premier travel agency, crafting memorable journeys across North East India and beyond. Recognized by Dubai’s Department of Economy and Tourism and Ministry of Assam Tourism, we specialize in curating hassle-free travel experiences, offering competitive prices and expert services for both fixed and flexible itineraries.",
-    tagline: "Crafting Journeys, Connecting Memories",
+      "Global Konnect, rooted in Guwahati, Assam, is your gateway to unforgettable travel experiences across Northeast India and beyond. Accredited by Dubai’s Department of Economy and Tourism and Assam Tourism, we promise expertly crafted, hassle-free journeys. Whether it’s fixed plans or flexible itineraries, we blend affordability with excellence to suit every traveler’s needs. ",
+    tagline: "Creating Experiences, Connecting Destinations",
     description:
-      "Your trusted partner in travel, offering expertly curated, cost-effective journeys. Discover comfort, flexibility, and the ease of exploring the world with us.",
+      "Discover the joy of seamless travel with us—tailored trips, personalized care, and unforgettable memories, all at unbeatable value.",
   },
   tours: {
     dubai:
-      "Discover the dazzling cityscape of Dubai with its iconic landmarks, luxury shopping, and vibrant nightlife. Experience a blend of modern marvels and traditional Arabian charm.",
+      "Explore luxury, iconic landmarks, and vibrant nightlife—Dubai offers the ultimate fusion of modernity and Arabian charm",
     northEastIndia:
-      "Explore the enchanting landscapes of North East India, from lush green valleys and majestic mountains to unique cultural experiences and serene natural beauty.",
+      "Discover majestic mountains, lush valleys, and rich traditions—unmatched serenity and culture await you.",
     thailand:
-      "Immerse yourself in the vibrant culture and stunning landscapes of Thailand. Enjoy bustling cities, tranquil beaches, and exquisite cuisine in this tropical paradise.",
+      "Dive into tropical bliss with vibrant cities, serene beaches, and world-famous cuisine. A paradise like no other!",
   },
   whyChooseGK: {
     bullets: [
       {
         title: "Personalized Itineraries:",
         point:
-          "We craft bespoke itineraries tailored to your interests, ensuring a travel experience that's uniquely yours and unforgettable.",
+          "We design bespoke plans tailored to your interests, ensuring a unique and unforgettable travel experience.",
       },
       {
         title: "Expert guidance:",
         point:
-          "Our travel experts offer insights and recommendations, expertly planning every trip aspect, from destinations to accommodations.",
+          "With years of experience, our travel agency provides expert guidance on destinations, accommodations, and hidden gems worldwide.",
       },
       {
         title: "Exclusive deals:",
         point:
-          "Enjoy special rates and offers through our industry connections, giving you the best value for your travel investment.",
+          "Exclusive Deals: Enjoy special rates and offers on flights, stays, and packages through our trusted industry connections.",
       },
       {
         title: "24x7 support:",
         point:
-          "Our support team is available around the clock, ready to assist you before and during your trip for peace of mind.",
+          "Our team is available anytime to assist you before or during your journey for peace of mind.",
       },
       {
         title: "Memorable experiences:",
         point:
-          "We create moments to cherish, discovering hidden gems and enjoying landmarks to leave you with lasting travel memories.",
+          "Global Konnect goes beyond tourist spots, uncovering hidden gems and creating unforgettable experiences for lasting travel memories.",
       },
     ],
   },
   services: {
     flightDeals:
-      "Exclusive flight deals to top destinations around the world, ensuring the best prices and comfortable travel experiences.",
+      "Unlock unbeatable flight offers for top destinations, combining great prices with a hassle-free booking experience.",
     travelPackages:
-      "Specially curated travel packages that cater to various interests and budgets, providing you with a seamless and enjoyable vacation.",
+      "Explore handpicked travel packages tailored to your interests, ensuring unforgettable journeys within your budget.",
     visaAssistance:
-      "Hassle-free visa assistance to help you navigate the complexities of travel documentation, making your journey smoother and more efficient.",
+      "Simplify travel with expert visa guidance, ensuring smooth and quick documentation for your next adventure.",
     forexServices:
-      "Comprehensive forex services to provide you with the best exchange rates and financial support for your international travels.",
+      "Access the best exchange rates with reliable forex solutions, keeping your international travels stress-free and secure.",
   },
   testimonials: [
-    {text:"Global Konnect made our family vacation to Bali unforgettable! The personalized itinerary and seamless arrangements allowed us to focus on enjoying the beautiful beaches and vibrant culture. Highly recommended!",people:"Raghav, Ooty"},
-    {text:"I had a fantastic experience with Global Konnect. Their attention to detail and exceptional customer service turned our trip to Europe into a dream come true. Every aspect of the trip was perfectly planned and executed.",people:"Supriti, New Delhi"},
-    {text:"Travelling with Global Konnect was a breeze. Their team’s expertise and support throughout our trip to Dubai were outstanding. They truly go above and beyond to ensure a memorable travel experience.",people:"Ajay, Rajasthan"},
-  {text:"From booking to the actual trip, Global Konnect provided top-notch service. Our honeymoon in the Maldives was everything we hoped for and more, thanks to their thoughtful planning and recommendations.",people:"Gourav, Navi Mumbai"},
-  {text:"Global Konnect's exceptional service and local insights made our trip to Northeast India an adventure of a lifetime. We were impressed by their professionalism and the personalized touch they added to our journey.",people:"Vedah, Kolkata"},
+    {
+      text: "Global Konnect made our Bali vacation unforgettable! Their personalized itinerary and detailed arrangements allowed us to enjoy the stunning beaches and vibrant culture without a worry. Highly recommended!",
+      people: "Raghav, Ooty",
+    },
+    {
+      text: "I had a wonderful experience with Global Konnect. Their expert planning and attention to detail made our Europe trip seamless, and truly exceptional.",
+      people: "Supriti, New Delhi",
+    },
+    {
+      text: "Traveling with Global Konnect was effortless. Their expert team ensured the best deals and unique experiences, making our Dubai trip unforgettable. Highly recommended for hassle-free holidays!",
+      people: "Ajay, Rajasthan",
+    },
+    {
+      text: "Global Konnect ensured a dream honeymoon in the Maldives with exceptional planning, unique experiences, and unmatched attention to detail.  We couldn’t be more grateful.",
+      people: "Gourav, Navi Mumbai",
+    },
+    {
+      text: "Global Konnect crafted a fun Northeast India journey with their regional expertise, cultural knowledge, and meticulous planning. A seamless blend of adventure, discovery, and personalized care!",
+      people: "Vedah, Kolkata",
+    },
   ],
   footer: {
     links: ["HOME", "ABOUT US", "TOURS", "CLIENTS", "VISA", "CONTACT US"],
